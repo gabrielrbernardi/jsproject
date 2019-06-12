@@ -1,1 +1,1 @@
-# This file is an small applicantion in JavaScript, HTML and CSS
+# This repository contains an small applicantion using JavaScript, HTML and CSS

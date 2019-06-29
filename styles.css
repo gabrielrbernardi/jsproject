@@ -85,6 +85,13 @@ aside a {
 
 footer {
     text-align: center;
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
 
 footer img {
@@ -178,8 +185,24 @@ section h1 a {
     opacity: .5;
 }
 
+.title_2 {
+    color: #f1f1f1;
+    width: 430px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.title_1:hover {
+    opacity: .5;
+}
+
 .img_hover {
     vertical-align: middle;
+}
+
+.color_link {
+    color: #f1f1f1
 }
 
 .nav_body {

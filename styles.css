@@ -18,11 +18,15 @@ header img {
 }
 
 .logo_header {
+    width: 140px;
+    height: 75px;
     opacity: 1;
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
     cursor: pointer;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 .logo_header:hover {

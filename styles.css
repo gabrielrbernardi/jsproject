@@ -88,6 +88,9 @@ aside a {
     padding: 5px;
 }
 
+
+/* Alterar a propriedade 'top' no caso de a pagina ficar desconfigurada */
+
 footer {
     text-align: center;
     display: block;
@@ -192,7 +195,7 @@ section h1 a {
 
 .title_2 {
     color: #f1f1f1;
-    min-width: 160px;
+    min-width: 208px;
     margin-bottom: 0;
     margin-top: 0;
     font-size: 20px;

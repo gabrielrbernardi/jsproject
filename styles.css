@@ -57,7 +57,8 @@ header form input {
 }
 
 aside img {
-    height: 50px;
+    height: 68px;
+    margin-bottom: 0;
 }
 
 ul {
@@ -90,7 +91,7 @@ aside a {
 footer {
     text-align: center;
     display: block;
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -191,7 +192,7 @@ section h1 a {
 
 .title_2 {
     color: #f1f1f1;
-    width: 430px;
+    min-width: 160px;
     margin-bottom: 0;
     margin-top: 0;
     font-size: 20px;
@@ -270,4 +271,29 @@ section h1 a {
 
 .dropdown1-content a:hover {
     background-color: #ddd
+}
+
+.dropdown_menu {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.dropdown_menu_content {
+    display: none;
+    position: absolute;
+    background-color: #344654;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 1;
+}
+
+.dropdown_menu:hover .dropdown_menu_content {
+    display: block;
 }

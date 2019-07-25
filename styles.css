@@ -195,7 +195,7 @@ section h1 a {
 
 .title_2 {
     color: #f1f1f1;
-    min-width: 208px;
+    min-width: 19px;
     margin-bottom: 0;
     margin-top: 0;
     font-size: 20px;
@@ -288,7 +288,7 @@ section h1 a {
     display: none;
     position: absolute;
     background-color: #344654;
-    min-width: 160px;
+    min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding-right: 12px;
     padding-left: 12px;
@@ -299,4 +299,65 @@ section h1 a {
 
 .dropdown_menu:hover .dropdown_menu_content {
     display: block;
+}
+
+
+/* BARRA DE NAVEGACAO / NAVIGATION BAR */
+
+.menu_image:hover {
+    opacity: 0.5;
+}
+
+.menu_image {
+    cursor: pointer;
+    margin-right: -80px;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #273f51;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.75s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.25s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }

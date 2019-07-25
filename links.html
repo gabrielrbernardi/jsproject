@@ -26,8 +26,9 @@
                 </ul>
             </nav>
             <form>
-                <label for="search"></label>
-                <input id="search" type="text" placeholder="Search..." value="" />
+                <!-- <label for="search"></label> -->
+                <!-- Use any element to open the sidenav -->
+                <span onclick="openNav()" class="menu_image"><img src="menu.png"></span>
             </form>
         </aside>
     </header>
@@ -36,15 +37,12 @@
         <h1 class="title_1">Links úteis</h1>
         <h1 class="title_1">---------------------------------------------</h1>
         <h2 class="title_2">
-            <a class="color_link" href="https://penseallen.github.io/PensePython2e/" target="_blank">Apostila python GitHub</a>
-        </h2>
-        <h2 class="title_2">
             <a class="color_link" href="https://www.urionlinejudge.com.br/judge/pt" target="_blank"><br>URI Online Judge</a>
         </h2>
         <div class="dropdown">
             <!-- <button onclick="myFunction()" class="dropbtn">Dropdown</button> -->
             <h2 class="title_2">
-                <a class="color_link" onclick="myFunction()"><br>SourceInnovation</a>
+                <a class="color_link2" onclick="myFunction()"><br>SourceInnovation</a>
             </h2>
             <div id="myDropdown" class="dropdown-content">
                 <h2 class="title_2">
@@ -58,10 +56,13 @@
         </div>
         <div class="dropdown_menu">
             <h2 class="title_2">
-                <a class="color_link2"><br>Curso em Video Python</a>
+                <a class="color_link2"><br>Python</a>
             </h2>
             <!-- <span class='color_link'>Mouse over me</span> -->
             <div class="dropdown_menu_content">
+                <h2 class="title_2">
+                    <a class="color_link2">Curso em Video</a>
+                </h2>
                 <h2 class="title_2">
                     <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6" target="_blank">Mundo 1</a>
                 </h2>
@@ -70,6 +71,12 @@
                 </h2>
                 <h2 class="title_2">
                     <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dksnH2jVTIVNviIMBVYyFnH" target="_blank">Mundo 3</a>
+                </h2>
+                <h2 class="title_2">
+                    <a class="color_link2">PYTHON</a>
+                </h2>
+                <h2 class="title_2">
+                    <a class="color_link" href="https://penseallen.github.io/PensePython2e/" target="_blank">Apostila python GitHub</a>
                 </h2>
             </div>
         </div><br>
@@ -100,7 +107,16 @@
                 </h2>
             </div>
         </div>
+        <h2 class="title_2">
+            <a class="color_link" href="http://dontpad.com/grbernardi" target="_blank"><br>Dontpad</a>
+        </h2>
     </nav>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#">Links Úteis</a></li>
+    </div>
 
     <footer>
         <aside>

@@ -210,11 +210,15 @@ section h1 a {
 }
 
 .color_link {
-    color: #f1f1f1
+    color: #f1f1f1;
 }
 
 .color_link2 {
-    color: #969696
+    color: #969696;
+}
+.color_link2 {
+    color: #969696;
+    cursor: default;
 }
 
 .nav_body {

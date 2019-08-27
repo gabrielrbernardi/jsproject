@@ -196,8 +196,8 @@ section h1 a {
 .title_2 {
     color: #f1f1f1;
     min-width: 19px;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 10px;
+    margin-top: 0px;
     font-size: 20px;
 }
 
@@ -213,9 +213,6 @@ section h1 a {
     color: #f1f1f1;
 }
 
-.color_link2 {
-    color: #969696;
-}
 .color_link2 {
     color: #969696;
     cursor: default;

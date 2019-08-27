@@ -39,15 +39,15 @@
     </header>
 
     <nav class="nav_body">
-        <h1 class="title_1">Links úteis</h1>
-        <h1 class="title_1">---------------------------------------------</h1>
+        <li class="title_1"><a class="color_link2">Links Úteis</a></li><br>
+        <li class="title_1"><a class="color_link2">---------------------------------------------</a></li>
         <h2 class="title_2">
-            <a class="color_link" href="https://www.urionlinejudge.com.br/judge/pt" target="_blank"><br>URI Online Judge</a>
+            <a class="color_link" href="https://www.urionlinejudge.com.br/judge/pt" target="_blank">URI Online Judge</a>
         </h2>
         <div class="dropdown">
             <!-- <button onclick="myFunction()" class="dropbtn">Dropdown</button> -->
             <h2 class="title_2">
-                <a class="color_link2" onclick="myFunction()"><br>SourceInnovation</a>
+                <a class="color_link2" onclick="myFunction()">SourceInnovation</a>
             </h2>
             <div id="myDropdown" class="dropdown-content">
                 <h2 class="title_2">
@@ -61,7 +61,7 @@
         </div>
         <div class="dropdown_menu">
             <h2 class="title_2">
-                <a class="color_link2"><br>Python</a>
+                <a class="color_link2">Python</a>
             </h2>
             <!-- <span class='color_link'>Mouse over me</span> -->
             <div class="dropdown_menu_content">
@@ -88,7 +88,7 @@
         <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
         <div class="dropdown_menu">
             <h2 class="title_2">
-                <a class="color_link2"><br>JAVA</a>
+                <a class="color_link2">JAVA</a>
             </h2>
             <!-- <span class='color_link'>Mouse over me</span> -->
             <div class="dropdown_menu_content">
@@ -118,7 +118,7 @@
         <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
         <div class="dropdown_menu">
             <h2 class="title_2">
-                <a class="color_link2"><br>PHP</a>
+                <a class="color_link2">PHP</a>
             </h2>
             <div class="dropdown_menu_content">
                 <h2 class="title_2">
@@ -134,16 +134,22 @@
                     <a class="color_link2">PHP</a>
                 </h2>
                 <h2 class="title_2">
-                    <a class="color_link" href="https://www.w3schools.com/php/default.asp" target="_blank">Java W3Schools<br></a>
+                    <a class="color_link" href="https://www.w3schools.com/php/default.asp" target="_blank">PHP W3Schools<br></a>
                 </h2>
             </div>
         </div>
         <h2 class="title_2">
-            <a class="color_link" href="http://dontpad.com/grbernardi" target="_blank"><br>Dontpad</a>
+            <a class="color_link" href="http://dontpad.com/grbernardi" target="_blank">Dontpad</a>
         </h2>
         <h2 class="title_2">
-        	<a class="color_link2"><br>JAVA POO Curso em video: Aula 07a</a>
-        </h2>
+            <a class="color_link2"><br>JAVA POO Curso em video: Aula 07a</a>
+        </h2><br>
+        <li class="title_1"><a class="color_link2">Horário de acesso:</a></li><br>
+        <li class="title_1"><a class="color_link2" id="demo">Data</a></li>
+        <script>
+            var d = new Date();
+            document.getElementById("demo").innerHTML = d;
+        </script>
     </nav>
 
     <footer>
@@ -152,8 +158,8 @@
                 <img src="untitled.png" alt="Logo GB Site">
             </a>
             <ul>
-                <li><a href="error.html">Termos e aviso de privacidade</a></li>
-                <li><a href="error.html">Enviar feedback</a></li>
+                <!-- <li><a href="error.html">Termos e aviso de privacidade</a></li> -->
+                <li><a href="https://github.com/gabrielrbernardi/jsproject" target="_blank">GitHub</a></li>
                 <li><a href="error.html">Ajuda</a></li>
                 <li>
                     <p>&copy; 2019, Gabriel Bernardi</p>

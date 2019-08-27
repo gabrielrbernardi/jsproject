@@ -201,6 +201,14 @@ section h1 a {
     font-size: 20px;
 }
 
+.title_2_ddm {
+    color: #f1f1f1;
+    min-width: 19px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 20px;
+}
+
 .title_1:hover {
     opacity: .5;
 }

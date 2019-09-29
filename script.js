@@ -1,13 +1,3 @@
-function soma(a, b) {
-    return a + b;
-}
-
-function texto() {
-    var str1 = "gabriel";
-    str1 = str1.toUpperCase();
-    return str1;
-}
-
 var str = "A data e hora serão alterados aqui";
 
 var x = texto();
@@ -33,6 +23,10 @@ window.onclick = function(event) {
     }
 }
 
+function data() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.getDay() + 1;
+}
 
 // --------------------------------------------------------------
 

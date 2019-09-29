@@ -34,17 +34,26 @@
             <form>
                 <!-- <label for="search"></label> -->
                 <!-- Use any element to open the sidenav -->
-                <span onclick="openNav()" class="menu_image"><img src="menu.png"></span>
+                <div class="menu_button1" onclick="openNav()">
+                    <div class="menu_button"></div>
+                    <div class="menu_button"></div>
+                    <div class="menu_button"></div>
+                </div>
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="links.html">Links Úteis</a></li>
+                    <!-- <input type="button" class="loginButton title" onclick="login()">Login</input> -->
+                    <p class="title_1 color_link2 datetime">Horario de acesso</p>
+                    <p class="title_1 color_link2 datetime" id="date">Data</p>
+                    <p class="title_1 color_link2 datetime" id="time">Horário</p>
                 </div>
             </form>
         </aside>
     </header>
 
     <nav class="nav_body">
+        <p class="title_1 color_link2 datetime" id="teste">teste</p>
         <li class="title_1"><a class="color_link2">Links Úteis</a></li><br>
         <li class="title_1"><a class="color_link2">---------------------------------------------</a></li>
         <h2 class="title_2">
@@ -118,6 +127,15 @@
                 </h2>
                 <h2 class="title_2_ddm">
                     <a class="color_link" href="https://www.w3schools.com/java/default.asp" target="_blank">Java W3Schools<br></a>
+                </h2><br>
+                <h2 class="title_2_ddm">
+                    <a class="color_link2">MySQL</a>
+                </h2>
+                <h2 class="title_2_ddm">
+                    <a class="color_link2">Curso em Video</a>
+                </h2>
+                <h2 class="title_2_ddm">
+                    <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkBs-795Dsgvau_ekxg8g1r" target="_blank">Banco de Dados</a>
                 </h2>
                 <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -227,37 +245,11 @@
         <h2 class="title_2">
             <a class="color_link2"><br>Python: Concluído</a>
             <a class="color_link2"><br>Java: Concluido</a>
-            <a class="color_link" href="https://www.w3schools.com/js/js_window.asp" target="_blank"><br>Window JS W3Schools</a>
-            <a class="color_link" href="https://www.w3schools.com/js/js_popup.asp" target="_blank"><br>Popup JS W3Schools</a>
             <!-- <a class="color_link" href="https://www.w3schools.com/php/php_arrays.asp" target="_blank"><br>PHP: w3schools, PHP Arrays</a> -->
-        </h2><br>
-        <li class="title_1"><a class="color_link2">Horário de acesso:</a></li><br>
-        <p class="title_1 color_link2" id="date">Data</p>
-        <p class="title_1 color_link2" id="time">Horário</p>
-
-        <script>
-            var d = new Date(),
-                dia, mes, ano, hora, minuto;
-            dia = d.getDate();
-            mes = d.getMonth() + 1;
-            ano = d.getFullYear();
-            document.getElementById("date").innerHTML = dia + '/' + mes + '/' + ano; //inserindo a data no HTML
-            hora = d.getHours();
-            minuto = d.getMinutes();
-            if (minuto >= 0 && minuto < 10) {
-                minuto = '0' + minuto;
-            }
-            if (hora >= 0 && hora < 10) {
-                hora = '0' + hora;
-            }
-            document.getElementById("time").innerHTML = hora + ':' + minuto; //inserindo o horario no HTML
-            // if (prompt("Script carregado com sucesso")) {
-            //     alert("OK");
-            // } else {
-            //     alert("Nao OK");
-            // }
-        </script>
+            <a class="color_link2"><br>MySQL: Em andamento</a>
+        </h2>
     </nav>
+
 
     <footer>
         <aside>

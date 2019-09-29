@@ -332,15 +332,23 @@ section h1 a {
 
 /* BARRA DE NAVEGACAO / NAVIGATION BAR */
 
-.menu_image:hover {
+.menu_button1:hover {
     opacity: 0.5;
 }
 
-.menu_image {
+.menu_button {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.menu_button1 {
+    margin-top: 8px;
+    margin-right: -30px;
+    display: inline-block;
     cursor: pointer;
-    margin-right: -80px;
-    opacity: 1;
-    transition: opacity .25s ease-in-out;
+    transition: .25s;
 }
 
 
@@ -388,4 +396,28 @@ section h1 a {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+
+.loginButton {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: none;
+    background-color: #6d6d6d;
+    color: #f1f1f1;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    /* width: 50px;
+    height: 25px; */
+}
+
+.loginButton:hover {
+    background-color: #b4b4b4;
+    color: black;
+}
+
+.datetime {
+    margin-left: 30px;
 }

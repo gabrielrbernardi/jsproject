@@ -239,7 +239,8 @@ section h1 a {
 
 .color_link2 {
     color: #969696;
-    cursor: default;
+    cursor: not-allowed;
+/*    cursor: default;*/
 }
 
 .nav_body {

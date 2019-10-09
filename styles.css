@@ -240,7 +240,17 @@ section h1 a {
 .color_link2 {
     color: #969696;
     cursor: not-allowed;
-/*    cursor: default;*/
+    /*    cursor: default;*/
+}
+
+.color_link3 {
+    color: #969696;
+    cursor: default;
+}
+
+.color_link4 {
+    color: #f1f1f1;
+    cursor: default;
 }
 
 .nav_body {

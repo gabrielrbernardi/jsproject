@@ -87,7 +87,7 @@ function loginLinks() {
 }
 
 function errorLogin() {
-    location.assign("error.html");
+    location.assign("/error.html");
 }
 
 var varTime1, varTime2;

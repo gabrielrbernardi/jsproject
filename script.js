@@ -1,5 +1,5 @@
-var correctUser = "GABRIEL"
-var correctPwd = "TESTE"
+var correctUser = "POOUFU"
+var correctPwd = "RESPPOO"
 
 var str = "A data e hora serão alterados aqui";
 
@@ -73,7 +73,7 @@ function loginLinks() {
         if (pwd) {
             pwd = pwd.toUpperCase();
             if (user == correctUser && pwd == correctPwd) {
-                location.assign("https://www.google.com");
+                // location.assign("https://www.google.com");
 
             } else {
                 deniedAccess();
@@ -87,7 +87,7 @@ function loginLinks() {
 }
 
 function errorLogin() {
-    // location.assign("error.html");
+    location.assign("error.html");
 }
 
 var varTime1, varTime2;
@@ -96,7 +96,7 @@ var varTime1, varTime2;
 function deniedAccess() {
     alert("Acesso negado");
     document.getElementById("teste").innerHTML = "ACESSO NEGADO";
-    // varTime1 = setInterval(errorLogin, 750);
+    varTime1 = setInterval(errorLogin, 1);
     varTime2 = setInterval(closeNav, 500);
     // window.history.back();
 

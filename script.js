@@ -87,7 +87,7 @@ function loginLinks() {
 }
 
 function errorLogin() {
-    location.assign("./error.html");
+    // location.assign("./error.html");
 }
 
 var varTime1, varTime2;
@@ -96,7 +96,9 @@ var varTime1, varTime2;
 function deniedAccess() {
     alert("Acesso negado");
     document.getElementById("teste").innerHTML = "ACESSO NEGADO";
-    varTime1 = setInterval(errorLogin, 50);
+    location.assign("error.html");
+
+    // varTime1 = setInterval(errorLogin, 50);
     varTime2 = setInterval(closeNav, 500);
     // window.history.back();
 

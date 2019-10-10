@@ -35,6 +35,7 @@ function data() {
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
+    clearInterval(varTime2);
     document.getElementById("mySidenav").style.width = "200px";
     // Comandos para pegar a data e hora e colocar no html
     document.getElementById("mySidenav").style.width = "200px";
@@ -91,10 +92,11 @@ function errorLogin() {
 
 var varTime1, varTime2;
 
+
 function deniedAccess() {
     alert("Acesso negado");
     document.getElementById("teste").innerHTML = "ACESSO NEGADO";
-    varTime1 = setInterval(errorLogin, 750);
+    // varTime1 = setInterval(errorLogin, 750);
     varTime2 = setInterval(closeNav, 500);
     // window.history.back();
 

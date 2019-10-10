@@ -107,6 +107,7 @@ footer {
     width: 100%;
     color: white;
     text-align: center;
+    z-index: 0;
 }
 
 footer img {
@@ -256,6 +257,8 @@ section h1 a {
 .nav_body {
     margin-left: 10px;
     margin-top: 10px;
+    overflow: visible;
+    padding-bottom: 10%;
 }
 
 .dropdown {
@@ -343,7 +346,7 @@ section h1 a {
     height: 453px;
     width: 99%;
     resize: both;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 

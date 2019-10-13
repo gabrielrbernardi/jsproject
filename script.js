@@ -1,5 +1,5 @@
-var correctUser = "POOUFU"
-var correctPwd = "RESPPOO"
+var correctUser = "GABRIEL"
+var correctPwd = "TESTE"
 
 var str = "A data e hora serão alterados aqui";
 

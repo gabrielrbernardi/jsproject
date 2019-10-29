@@ -3,11 +3,11 @@ var correctPwd = "TESTE"
 
 var str = "A data e hora serão alterados aqui";
 
-var x = texto();
-document.getElementById("teste").innerHTML = x;
+// var x = texto();
+// document.getElementById("teste").innerHTML = x;
 
-var y = texto();
-document.getElementById("teste").innerHTML = y;
+// var y = texto();
+// document.getElementById("teste").innerHTML = y;
 
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -103,3 +103,39 @@ function deniedAccess() {
     // window.history.back();
 
 }
+
+var loginUsers = [{
+        usr: "gabriel",
+        pwd: "teste"
+    },
+    {
+        usr: "leo",
+        pwd: "abc"
+    }
+]
+
+function verifyLogin() {
+    var usr = document.getElementById("usr").value;
+    var pwd = document.getElementById("pwd").value;
+
+    for (var i = 0; i < loginUsers.length; i++) {
+        if (usr == loginUsers[i].usr && pwd == loginUsers[i].pwd) {
+            document.getElementById("statusLogin").innerHTML = "ACESSO AUTORIZADO";
+            return;
+        }
+    }
+    document.getElementById("statusLogin").innerHTML = "ACESSO NEGADO";
+
+}
+
+//setting to when user press enter key, submit the username and password, without click on submit button
+document.getElementById("pwd").onkeydown = function(e) {
+    if (e.keyCode == 13) {
+        verifyLogin();
+    }
+};
+document.getElementById("usr").onkeydown = function(e) {
+    if (e.keyCode == 13) {
+        verifyLogin();
+    }
+};

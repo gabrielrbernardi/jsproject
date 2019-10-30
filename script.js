@@ -121,11 +121,12 @@ function verifyLogin() {
     for (var i = 0; i < loginUsers.length; i++) {
         if (usr == loginUsers[i].usr && pwd == loginUsers[i].pwd) {
             document.getElementById("statusLogin").innerHTML = "ACESSO AUTORIZADO";
+            document.getElementById("statusLogin").style.color = "#333333";
             return;
         }
     }
     document.getElementById("statusLogin").innerHTML = "ACESSO NEGADO";
-
+    document.getElementById("statusLogin").style.color = "#333333";
 }
 
 //setting to when user press enter key, submit the username and password, without click on submit button

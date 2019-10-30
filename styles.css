@@ -506,4 +506,11 @@ section h1 a {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    background-color: rgba(195, 195, 195, 0.9);
+    padding: 10px 27px 0px 0px;
+    transition: .2s;
+}
+
+#statusLogin{
+    transition: .8s ease 0s;
 }

@@ -40,10 +40,9 @@ function openNav() {
     // Comandos para pegar a data e hora e colocar no html
     document.getElementById("mySidenav").style.width = "200px";
     document.getElementById("main").style.marginRight = "200px";
-    var d = new Date(),
-        dia, mes, ano, hora, minuto;
+    var d = new Date(), dia, mes, ano, hora, minuto;
     dia = d.getDate();
-    mes = d.getMonth() + 1;
+    mes = d.getMonth()+1;
     ano = d.getFullYear();
     document.getElementById("date").innerHTML = dia + '/' + mes + '/' + ano; //inserindo a data no HTML
     hora = d.getHours();
@@ -117,6 +116,7 @@ var loginUsers = [{
 function verifyLogin() {
     var usr = document.getElementById("usr").value;
     var pwd = document.getElementById("pwd").value;
+    usr = usr.toLowerCase();
 
     for (var i = 0; i < loginUsers.length; i++) {
         if (usr == loginUsers[i].usr && pwd == loginUsers[i].pwd) {

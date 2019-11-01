@@ -38,7 +38,13 @@
                     <li><a href="index.html">Início</a></li>
                     <li><a href="links.html">Links Úteis</a></li>
 
-                    <input type="button" class="loginButton" value="Login" onclick="loginLinks()"></input>
+                    <!-- <input type="button" class="loginButton" value="Login" onclick="loginLinks()"></input> -->
+                    <input type="button" class="loginButton" value="Login" onclick="redirect()"></input>
+                    <script>
+                        function redirect(){
+                            location.href = "login.html";
+                        }
+                    </script>
                     <p class="title_1 color_link2 datetime">Horario de acesso</p>
                     <p class="title_1 color_link2 datetime" id="date">Data</p>
                     <p class="title_1 color_link2 datetime" id="time">Horário</p>
@@ -56,8 +62,17 @@
         <br> -->
         <h2 class="title_2_index">Para abrir o menu de navegação,
         <a class="title_2_index" onclick="openNav()"><br>CLIQUE AQUI</a>
-        </h2><br>
+        </h2>
         <span onclick="openNav()" class="menu_image"></span>
+        <h2>
+            <a class="title_2_index" onclick="redirect1()">Links Úteis</a><br>
+        </h2>
+        <script>
+            function redirect1(){
+                location.href = "links.html";
+            }
+        </script>
+
         <h1 class="title_1">Este site, no momento, é utilizado para facilitar a utilização de links de diversos sites.</h1><br>
         <h2 class="title_2_index">Posteriormente, serão adicionadas páginas na linguagem PHP, no entanto, o site foi desenvolvido utilizando HTML, CSS e JavaScript</h2><br>
         <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a> -->

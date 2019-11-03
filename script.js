@@ -42,6 +42,9 @@ function openNav() {
     document.getElementById("main").style.marginRight = "200px";
     var d = new Date(), dia, mes, ano, hora, minuto;
     dia = d.getDate();
+    if(dia > 0 && dia < 10){
+        dia = '0' + dia;
+    }
     mes = d.getMonth()+1;
     ano = d.getFullYear();
     document.getElementById("date").innerHTML = dia + '/' + mes + '/' + ano; //inserindo a data no HTML
@@ -88,19 +91,14 @@ function loginLinks() {
 function errorLogin() {
     // location.assign("./error.html");
 }
-
 var varTime1, varTime2;
-
-
 function deniedAccess() {
     alert("Acesso negado");
     document.getElementById("teste").innerHTML = "ACESSO NEGADO";
     location.assign("error.html");
-
     // varTime1 = setInterval(errorLogin, 50);
     varTime2 = setInterval(closeNav, 500);
     // window.history.back();
-
 }
 
 var loginUsers = [{
@@ -108,8 +106,8 @@ var loginUsers = [{
         pwd: "teste"
     },
     {
-        usr: "leo",
-        pwd: "abc"
+        usr: "admin",
+        pwd: "admin"
     }
 ]
 
@@ -127,6 +125,10 @@ function verifyLogin() {
     }
     document.getElementById("statusLogin").innerHTML = "ACESSO NEGADO";
     document.getElementById("statusLogin").style.color = "#333333";
+    // setTimeout(function(){
+    //     document.getElementById("statusLogin").innerHTML = "";
+    //     document.getElementById("statusLogin").style.color = "";
+    // }, 2000);
 }
 
 //setting to when user press enter key, submit the username and password, without click on submit button

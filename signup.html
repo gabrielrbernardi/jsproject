@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" name="viewport" />
     <link rel="stylesheet" href="styles.css">
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="shortcut icon" href="assets/prime_icon.ico" />
 </head>
 
@@ -47,7 +47,7 @@
                     <!-- <input type="button" class="loginButton" value="Login" onclick="loginLinks()"></input> -->
                     <input type="button" class="loginButton" value="Login" onclick="redirect()"></input>
                     <script>
-                        function redirect() {
+                        function redirect(){
                             location.href = "login.html";
                         }
                     </script>
@@ -59,19 +59,14 @@
         </aside>
     </header>
 
-
-    <div class="loginImage">
+    <div class="signUpImage">
     </div>
-
 
     <form class="loginForm">
         <input type="text" class="loginTextBox" id="usr" placeholder="Username" required autocomplete="off"><br>
         <input type="password" class="loginTextBox" id="pwd" placeholder="Password" required autocomplete="off"><br>
-        <button type="button" id="submit" onclick="verifyLogin()" class="loginButtonBody">Submit</button>
-        <a class="color_link5" href="signup.html">Sign Up</a>
-
-        <a class="title_1" id="link"></a>
-
+        <button type="button" id="submit" onclick="signup()" class="signUpButtonBody">Create account</button>
+        <a class="color_link5" href="login.html">Login</a>
         <p class="color_link4 datetime" id="statusLogin"></p>
     </form>
 
@@ -93,6 +88,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <!-- <script src="connect.js"></script> -->
+    <script src="connect.js"></script>
 
 </body>

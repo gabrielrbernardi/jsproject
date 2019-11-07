@@ -40,12 +40,13 @@ function openNav() {
     // Comandos para pegar a data e hora e colocar no html
     document.getElementById("mySidenav").style.width = "200px";
     document.getElementById("main").style.marginRight = "200px";
-    var d = new Date(), dia, mes, ano, hora, minuto;
+    var d = new Date(),
+        dia, mes, ano, hora, minuto;
     dia = d.getDate();
-    if(dia > 0 && dia < 10){
+    if (dia > 0 && dia < 10) {
         dia = '0' + dia;
     }
-    mes = d.getMonth()+1;
+    mes = d.getMonth() + 1;
     ano = d.getFullYear();
     document.getElementById("date").innerHTML = dia + '/' + mes + '/' + ano; //inserindo a data no HTML
     hora = d.getHours();
@@ -92,6 +93,7 @@ function errorLogin() {
     // location.assign("./error.html");
 }
 var varTime1, varTime2;
+
 function deniedAccess() {
     alert("Acesso negado");
     document.getElementById("teste").innerHTML = "ACESSO NEGADO";
@@ -108,6 +110,10 @@ var loginUsers = [{
     {
         usr: "admin",
         pwd: "admin"
+    },
+    {
+        usr: "prova2",
+        pwd: "poo"
     }
 ]
 
@@ -119,12 +125,15 @@ function verifyLogin() {
     for (var i = 0; i < loginUsers.length; i++) {
         if (usr == loginUsers[i].usr && pwd == loginUsers[i].pwd) {
             document.getElementById("statusLogin").innerHTML = "ACESSO AUTORIZADO";
-            document.getElementById("statusLogin").style.color = "#333333";
+            document.getElementById("statusLogin").style.color = "rgb(27, 255, 35)";
+            setTimeout(function() {
+                location.assign("https://github.com/gabrielrbernardi/ProvaPOO");
+            }, 1000);
             return;
         }
     }
     document.getElementById("statusLogin").innerHTML = "ACESSO NEGADO";
-    document.getElementById("statusLogin").style.color = "#333333";
+    document.getElementById("statusLogin").style.color = "#ad0000";
     // setTimeout(function(){
     //     document.getElementById("statusLogin").innerHTML = "";
     //     document.getElementById("statusLogin").style.color = "";

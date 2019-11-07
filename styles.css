@@ -254,6 +254,14 @@ section h1 a {
     cursor: default;
 }
 
+.color_link5{
+    color: #333333;
+}
+
+.color_link5:hover{
+    color: #c3c3c3;
+}
+
 .nav_body {
     margin-left: 10px;
     margin-top: 10px;
@@ -469,7 +477,27 @@ section h1 a {
 .loginButtonBody:hover{
     background-color: #929292;
     color: black;
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+.signUpButtonBody{
+    margin-left: 30px;
+    padding: 0px;
+    border: none;
+    background-color: #6d6d6d;
+    color: #f1f1f1;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 150px;
+    height: 25px;
+}
+
+.signUpButtonBody:hover{
+    background-color: #929292;
+    color: black;
+    /* transform: scale(1.05); */
 }
 
 .loginTextBox{
@@ -495,7 +523,19 @@ section h1 a {
 }
 
 .loginImage{
-    background-image: url("https://i.pinimg.com/originals/35/44/d3/3544d3bf4b6f2d08c382298ff0e9e3f6.jpg");
+    background-image: url("./assets/images/imageLogin.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 530px;
+    /* filter: blur(1px);
+    -webkit-filter: blur(1px); */
+}
+
+.signUpImage{
+    background-image: url("./assets/images/imageSignUp.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -512,7 +552,7 @@ section h1 a {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgba(195, 195, 195, 0.8);
+    background-color: #a1a1a1cc;
     padding: 10px 27px 0px 0px;
     transition: .2s;
 }

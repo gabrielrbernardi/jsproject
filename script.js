@@ -127,8 +127,8 @@ function verifyLogin() {
             document.getElementById("statusLogin").innerHTML = "ACESSO AUTORIZADO";
             document.getElementById("statusLogin").style.color = "rgb(27, 255, 35)";
             setTimeout(function() {
-                location.assign("https://github.com/gabrielrbernardi/ProvaPOO");
-            }, 1000);
+                location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
+            }, 500);
             return;
         }
     }

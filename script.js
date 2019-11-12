@@ -58,6 +58,12 @@ function openNav() {
         hora = '0' + hora;
     }
     document.getElementById("time").innerHTML = hora + ':' + minuto; //inserindo o horario no HTML
+    var x = navigator.onLine;
+    if(x){
+        document.getElementById("teste").innerHTML = "You're online";
+    }else{
+        document.getElementById("teste").innerHTML = "You're offline";
+    }
 }
 
 /* Set the width of the side navigation to 0 */
@@ -103,6 +109,11 @@ function deniedAccess() {
     // window.history.back();
 }
 
+function loaderFunction() {
+    var element = document.getElementById("loader");
+    element.classList.toggle("loader");
+}
+
 var loginUsers = [{
         usr: "gabriel",
         pwd: "teste"
@@ -117,25 +128,33 @@ var loginUsers = [{
     }
 ]
 
+var interval = 500;
+
 function verifyLogin() {
     var usr = document.getElementById("usr").value;
     var pwd = document.getElementById("pwd").value;
     usr = usr.toLowerCase();
-
+    document.getElementById("statusLogin").innerHTML = "";
     for (var i = 0; i < loginUsers.length; i++) {
         if (usr == loginUsers[i].usr && pwd == loginUsers[i].pwd) {
-            document.getElementById("statusLogin").innerHTML = "ACESSO AUTORIZADO";
-            document.getElementById("statusLogin").style.color = "rgb(27, 255, 35)";
+            loaderFunction();
             setTimeout(function() {
-                location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
-            }, 500);
+                document.getElementById("statusLogin").innerHTML = "ACESSO AUTORIZADO";
+                document.getElementById("statusLogin").style.color = "rgb(27, 255, 35)";
+                //     location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
+                loaderFunction();
+            }, interval);
             return;
         }
     }
-    document.getElementById("statusLogin").innerHTML = "ACESSO NEGADO";
-    document.getElementById("statusLogin").style.color = "#ad0000";
-    // setTimeout(function(){
-    //     document.getElementById("statusLogin").innerHTML = "";
+    loaderFunction();
+    setTimeout(function(){
+        document.getElementById("statusLogin").innerHTML = "ACESSO NEGADO";
+        document.getElementById("statusLogin").style.color = "rgb(206, 0, 0)";
+        loaderFunction();
+    }, interval);
+        // setTimeout(function(){
+            //     document.getElementById("statusLogin").innerHTML = "";
     //     document.getElementById("statusLogin").style.color = "";
     // }, 2000);
 }

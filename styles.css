@@ -257,16 +257,31 @@ section h1 a {
 .color_link5{
     color: #333333;
 }
+/* .color_link6{                    stick element
+    position: sticky;
+    color: white;
+    top: 40px;
+    left: 40px;
+} */
 
 .color_link5:hover{
     color: #c3c3c3;
 }
 
+.nav_global{
+    float: left;
+    margin-bottom: 10%;
+}
+
 .nav_body {
+    float: left;
     margin-left: 10px;
     margin-top: 10px;
+    /* margin-bottom: 50px; */
     overflow: visible;
-    padding-bottom: 10%;
+    padding-bottom: 1%;
+    max-width: 400px;
+    /* background-color: #172631; */
 }
 
 .dropdown {
@@ -329,13 +344,14 @@ section h1 a {
     margin-bottom: 0;
     margin-top: 0;
     font-size: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .dropdown_menu_content {
     display: none;
     position: absolute;
     background-color: #344654;
-    min-width: 250px;
+    min-width: 260px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding-right: 1px;
     padding-left: 6px;
@@ -559,4 +575,20 @@ section h1 a {
 
 #statusLogin{
     transition: .8s ease 0s;
+}
+
+.loader {
+    margin-left: 115px;
+    margin-top: 10px;
+    border: 3px solid #f3f3f3; /* background color of spin */
+    border-top: 3px solid #707070; /*color that will be spin*/
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

@@ -141,8 +141,8 @@ function verifyLogin() {
             setTimeout(function() {
                 document.getElementById("statusLogin").innerHTML = "ACESSO AUTORIZADO";
                 document.getElementById("statusLogin").style.color = "rgb(27, 255, 35)";
-                //     location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
                 loaderFunction();
+                location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
             }, interval);
             return;
         }

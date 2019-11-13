@@ -32,14 +32,18 @@ function data() {
 }
 
 // --------------------------------------------------------------
-
+var configNav = 1;
 /* Set the width of the side navigation to 250px */
 function openNav() {
     clearInterval(varTime2);
     document.getElementById("mySidenav").style.width = "200px";
     // Comandos para pegar a data e hora e colocar no html
-    document.getElementById("mySidenav").style.width = "200px";
     document.getElementById("main").style.marginRight = "200px";
+    configNav = 1;
+    if(configNav == 1){
+        document.getElementById("nav_body").style.paddingBottom = "50%";
+    }
+    
     var d = new Date(),
         dia, mes, ano, hora, minuto;
     dia = d.getDate();
@@ -71,6 +75,8 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginRight = "0";
+    configNav = 0;
+    document.getElementById("nav_body").style.paddingBottom = "0";
 }
 
 function loginLinks() {
@@ -135,6 +141,17 @@ function verifyLogin() {
     var pwd = document.getElementById("pwd").value;
     usr = usr.toLowerCase();
     document.getElementById("statusLogin").innerHTML = "";
+    document.getElementById("statusLogin").style.color = "";
+    if(usr == "" || pwd == ""){
+        loaderFunction();
+        setTimeout(function() {
+            document.getElementById("statusLogin").innerHTML = "OS CAMPOS ACIMA<br>DEVEM SER PREENHIDOS";
+            document.getElementById("statusLogin").style.color = "rgb(206, 0, 0)";
+            loaderFunction();
+            // location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
+        }, interval);
+        return;
+    }
     for (var i = 0; i < loginUsers.length; i++) {
         if (usr == loginUsers[i].usr && pwd == loginUsers[i].pwd) {
             loaderFunction();
@@ -142,7 +159,7 @@ function verifyLogin() {
                 document.getElementById("statusLogin").innerHTML = "ACESSO AUTORIZADO";
                 document.getElementById("statusLogin").style.color = "rgb(27, 255, 35)";
                 loaderFunction();
-                location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
+                // location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
             }, interval);
             return;
         }

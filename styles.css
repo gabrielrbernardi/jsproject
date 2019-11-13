@@ -16,7 +16,7 @@ header {
 
 header img {
     vertical-align: middle;
-    margin-left: 30px;
+    margin-left: 5px;
     height: 156px;
 }
 
@@ -257,6 +257,15 @@ section h1 a {
 .color_link5{
     color: #333333;
 }
+
+.toUpperCase{
+    text-transform: uppercase;
+}
+
+.toLowerCase{
+    text-transform: lowercase;
+}
+
 /* .color_link6{                    stick element
     position: sticky;
     color: white;
@@ -269,19 +278,30 @@ section h1 a {
 }
 
 .nav_global{
-    float: left;
-    margin-bottom: 10%;
-}
-
-.nav_body {
-    float: left;
-    margin-left: 10px;
-    margin-top: 10px;
+    /* float: top;
+    margin-bottom: 10%; */
+    display: block;
     /* margin-bottom: 50px; */
     overflow: visible;
     padding-bottom: 1%;
-    max-width: 400px;
-    /* background-color: #172631; */
+    /* max-width: 400px; */
+    /* background-color: #172631; */    
+}
+
+.nav_body {
+    /* float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    overflow: visible;
+    padding-bottom: 1%;
+    /* float: left; */
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow: visible;
+    padding-bottom: 0;
+    /* background-color: gray; */
 }
 
 .dropdown {
@@ -388,8 +408,7 @@ section h1 a {
 }
 
 .menu_button1 {
-    margin-top: 10px;
-    margin-right: -35px;
+    margin: 6px -35px 0 0;
     display: inline-block;
     cursor: pointer;
     transition: .25s;

@@ -14,7 +14,7 @@
     ddm -> DropDown Menu
  -->
 
-<body oncontextmenu="return false" onpaste="return false">
+<body onpaste="return false">
     <header>
         <aside>
             <a href="index.html">
@@ -65,8 +65,8 @@
 
 
     <form class="loginForm">
-        <input type="text" class="loginTextBox" id="usr" placeholder="Username" required autocomplete="off"><br>
-        <input type="password" class="loginTextBox" id="pwd" placeholder="Password" required autocomplete="off"><br>
+        <input type="text" class="loginTextBox" id="usr" placeholder="Username" required autocomplete="off" autofocus title="Type an username to access"><br>
+        <input type="password" class="loginTextBox" id="pwd" placeholder="Password" required autocomplete="off" title="Type a password to access"><br>
         <button type="button" id="submit" onclick="verifyLogin()" class="loginButtonBody">Submit</button>
         <a class="color_link5" href="signup.html">Sign Up</a>
         <div id="loader"></div>

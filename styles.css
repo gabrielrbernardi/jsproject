@@ -300,7 +300,7 @@ section h1 a {
     margin-left: 10px;
     margin-top: 10px;
     overflow: visible;
-    padding-bottom: 0;
+    padding-bottom: 7%;
     /* background-color: gray; */
 }
 
@@ -413,7 +413,6 @@ section h1 a {
     cursor: pointer;
     transition: .25s;
 }
-
 
 /* The side navigation menu */
 

@@ -32,15 +32,17 @@ function data() {
 }
 
 // --------------------------------------------------------------
-var configNav = 1;
 /* Set the width of the side navigation to 250px */
 function openNav() {
+    var alturaTela = screen.height;
+    //development test
+    // document.getElementById("height").innerHTML = alturaTela;
+    
     clearInterval(varTime2);
     document.getElementById("mySidenav").style.width = "200px";
     // Comandos para pegar a data e hora e colocar no html
     document.getElementById("main").style.marginRight = "200px";
-    configNav = 1;
-    if(configNav == 1){
+    if(alturaTela < 768){
         document.getElementById("nav_body").style.paddingBottom = "50%";
     }
     
@@ -75,8 +77,7 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginRight = "0";
-    configNav = 0;
-    document.getElementById("nav_body").style.paddingBottom = "0";
+    document.getElementById("nav_body").style.paddingBottom = "7%";
 }
 
 function loginLinks() {

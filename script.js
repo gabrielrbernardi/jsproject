@@ -42,10 +42,9 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "200px";
     // Comandos para pegar a data e hora e colocar no html
     document.getElementById("main").style.marginRight = "200px";
-    if(alturaTela < 768){
-        document.getElementById("nav_body").style.paddingBottom = "50%";
-    }
-    
+    // if(alturaTela < 768){
+    //     document.getElementById("nav_body").style.paddingBottom = "50%";
+    // }
     var d = new Date(),
         dia, mes, ano, hora, minuto;
     dia = d.getDate();
@@ -66,9 +65,9 @@ function openNav() {
     document.getElementById("time").innerHTML = hora + ':' + minuto; //inserindo o horario no HTML
     var x = navigator.onLine;
     if(x){
-        document.getElementById("teste").innerHTML = "You're online";
+        document.getElementById("statusNetwork").innerHTML = "You're online";
     }else{
-        document.getElementById("teste").innerHTML = "You're offline";
+        document.getElementById("statusNetwork").innerHTML = "You're offline";
     }
 }
 

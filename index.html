@@ -12,19 +12,19 @@
 <body id="main">
     <header>
         <aside>
-            <a href="index.html">
-                <img class="logo_header" src="untitled.png" alt="Logo GB Site">
-            </a>
-            <nav>
+            <!-- <nav>
                 <ul>
-                    <!-- <li><a href="#">Início</a></li> -->
-                    <!-- <li><a href="#">Séries</a></li>
-                    <li><a href="#">Filmes</a></li>
-                    <li><a href="#">Infantil</a></li>
-                    <li><a href="#">Documentários</a></li> -->
-                    <!-- <li><a href="links.html">Links Úteis</a></li> -->
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html">Séries</a></li>
+                    <li><a href="index.html">Filmes</a></li>
+                    <li><a href="index.html">Infantil</a></li>
+                    <li><a href="index.html">Documentários</a></li>
+                    <li><a href="#">Links Úteis</a></li>
                 </ul>
-            </nav>
+            </nav> -->
+            <a href="index.html">
+                    <img href="index.html" class="logo_header" src="untitled.png" alt="Logo GB Site">
+                </a>
             <form>
                 <!-- <label for="search"></label> -->
                 <!-- Use any element to open the sidenav -->
@@ -35,71 +35,73 @@
                 </div>
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="links.html">Links Úteis</a></li>
 
                     <!-- <input type="button" class="loginButton" value="Login" onclick="loginLinks()"></input> -->
                     <input type="button" class="loginButton" value="Login" onclick="redirect()"></input>
                     <script>
-                        function redirect() {
+                        function redirect(){
                             location.href = "login.html";
                         }
                     </script>
                     <p class="title_1 color_link2 datetime">Access date and time</p>
-                    <p class="title_1 color_link2 datetime" id="date">Data</p>
-                    <p class="title_1 color_link2 datetime" id="time">Horário</p>
+                    <p class="title_1 color_link2 datetime" id="date">Date</p>
+                    <p class="title_1 color_link2 datetime" id="time">Time</p>
+                    <br>
+                    <p class="title_1 color_link2 datetime">Network status</p>
+                    <p class="title_1 color_link2 datetime" id="statusNetwork">Online?</p>
                 </div>
             </form>
         </aside>
-    </header>
+    </header> 
+    <nav class="nav_global">
+        <nav class="nav_body">
+            <!-- <h1 class="title_1">A função em JS retorna:</h1>
+            <h1 class="title_1">---------------------------------------------</h1>
+            <img class="img_hover" src="amazon_prime.png" onmouseover="document.getElementById('teste').innerHTML = x">
+            <p class="js" id="teste"></p>
+            <br> -->
+            <h2 class="title_2">
+                <a class="color_link" onclick="openNav()">Para abrir o menu de navegação, CLIQUE AQUI</a><br>
+            </h2>
+            <br>
+            <h2 class="title_2">
+                <a class="color_link" onclick="redirect1()">Links Úteis</a><br>
+            </h2>
+            <br>
+            <script>
+                function redirect1() {
+                    location.href = "links.html";
+                }
+            </script>
 
-    <nav class="nav_body">
-        <!-- <h1 class="title_1">A função em JS retorna:</h1>
-        <h1 class="title_1">---------------------------------------------</h1>
-        <img class="img_hover" src="amazon_prime.png" onmouseover="document.getElementById('teste').innerHTML = x">
-        <p class="js" id="teste"></p>
-        <br> -->
-        <h2 class="title_2_index">Para abrir o menu de navegação,
-            <a class="title_2_index" onclick="openNav()"><br>CLIQUE AQUI</a>
-        </h2>
-        <span onclick="openNav()" class="menu_image"></span>
-        <h2>
-            <a class="title_2_index" onclick="redirect1()">Links Úteis</a><br>
-        </h2>
-        <script>
-            function redirect1() {
-                location.href = "links.html";
-            }
-        </script>
+            <h2 class="title_2">
+                <a class="color_link">Este site, no momento, é utilizado para facilitar a utilização de links de diversos sites.</a>
+            </h2><br>
+            <h2 class="title_2">
+                <a class="color_link">Posteriormente, serão adicionadas páginas na linguagem PHP, no entanto, o site foi desenvolvido utilizando HTML, CSS e JavaScript</a>
+            </h2><br>
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a> -->
 
-        <h1 class="title_1">Este site, no momento, é utilizado para facilitar a utilização de links de diversos sites.</h1><br>
-        <h2 class="title_2_index">Posteriormente, serão adicionadas páginas na linguagem PHP, no entanto, o site foi desenvolvido utilizando HTML, CSS e JavaScript</h2><br>
-        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a> -->
-
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="links.html">Links Úteis</a></li>
-            <li><a href="dontpad.html">Dontpad</a></li>
-        </div>
-
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="links.html">Links Úteis</a></li>
+                <li><a href="dontpad.html">Dontpad</a></li>
+            </div>
+        </nav>
     </nav>
 
-    <footer>
-        <aside>
-            <!-- <a href="index.html">
-                <img src="untitled.png" alt="Logo GB Site">
-            </a> -->
-            <ul>
-                <!-- <li><a href="error.html">Termos e aviso de privacidade</a></li> -->
-                <li><a href="https://github.com/gabrielrbernardi" target="_blank">GitHub</a></li>
-                <li><a href="https://github.com/gabrielrbernardi/jsproject" target="_blank">JS Project</a></li>
-                <li><a href="error.html">Ajuda</a></li>
-                <li>
-                    <p>&copy; 2019, Gabriel Bernardi</p>
-                </li>
-            </ul>
-        </aside>
+    <footer class="footer_page">
+        <ul class="footer_ul">
+            <li><a class="footer_text" href="https://github.com/gabrielrbernardi" target="_blank">GitHub</a></li>
+            <li><a class="footer_text" href="https://github.com/gabrielrbernardi/jsproject" target="_blank">JS Project</a></li>
+            <li><a class="footer_text" href="error.html">Help</a></li>
+            <li>
+                <p>&copy; 2019, Gabriel Bernardi</p>
+            </li>
+        </ul>
     </footer>
 
     <script src="script.js">

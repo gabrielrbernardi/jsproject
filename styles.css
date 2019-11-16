@@ -1,3 +1,7 @@
+html{
+    margin: 0;
+    padding: 0;
+}
 body {
     margin: 0;
     font-family: Amazon Ember Regular, Arial, sans-serif;
@@ -12,7 +16,7 @@ header {
     padding-top: 0px;
     padding-bottom: 0px;
     padding-right: 0;
-    position: sticky;
+    position: static;
     top:0;
     z-index: 1;
 }
@@ -20,7 +24,6 @@ header {
 .logo_header {
     vertical-align: bottom;
     margin-left: 0;
-    height: 156px;
     width: 140px;
     height: 75px;
     opacity: 1;
@@ -97,37 +100,43 @@ aside a {
 
 /* Alterar a propriedade 'top' no caso de a pagina ficar desconfigurada */
 
-footer {
+.footer_page {
     background-color: #0d1b31;
     text-align: center;
-    padding: 2.5px 0px 0px 0px;
-    margin-top: 100px;
-    display: inline-block;
-    position: sticky;
+    padding-bottom: 0;
+    margin-top: 100;   
+    display: block;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     color: white;
     text-align: center;
     z-index: 0;
+    /* background-color: #0d1b31;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+    text-align: center; */
 }
 
-footer img {
-    margin-left: 40px;
-}
-
-footer a {
+.footer_text {
     color: #79B8F3;
 }
 
-footer ul {
+.footer_ul {
     margin: 0;
 }
 
 main {
     margin: auto;
     padding: 0;
-    text-align: center;
+    text-align: left;
 }
 
 section h1 {
@@ -260,6 +269,11 @@ section h1 a {
     color: #333333;
 }
 
+.color_link6{
+    color: #969696;
+    cursor: pointer;
+}
+
 .toUpperCase{
     text-transform: uppercase;
 }
@@ -285,6 +299,8 @@ section h1 a {
     display: block;
     /* margin-bottom: 50px; */
     overflow: visible;
+    flex: 1 0 auto;
+    /* padding: 20px; */
     /* padding-bottom: 5%; */
     /* max-width: 400px; */
     /* background-color: #172631; */    
@@ -611,4 +627,47 @@ section h1 a {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+    margin: 0;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(112, 112, 112, 0.15);
+    padding: 10px;
+    text-align: left;
+    background-color: #182835;
+    transition: transform .3s;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
 }

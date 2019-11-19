@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" id="main">
+<html lang="en" id="main" oncontextmenu="return false" style="overflow: hidden;">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" name="viewport" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Sign Up</title>
     <link rel="shortcut icon" href="assets/prime_icon.ico" />
 </head>
@@ -17,19 +17,20 @@
 <body oncontextmenu="return false" onpaste="return false">
     <header>
         <aside>
-            <!-- <nav>
+            <a href="index.html">
+                <img class="logo_header" src="untitled.png" alt="Logo GB Site">
+            </a>
+            <nav>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.html">Séries</a></li>
+                    <!-- <li><a href="index.html">Início</a></li> -->
+                    <!-- <li><a href="index.html">Séries</a></li>
                     <li><a href="index.html">Filmes</a></li>
                     <li><a href="index.html">Infantil</a></li>
-                    <li><a href="index.html">Documentários</a></li>
-                    <li><a href="#">Links Úteis</a></li>
+                    <li><a href="index.html">Documentários</a></li> -->
+                    <!-- <li><a href="#">Links Úteis</a></li> -->
+
                 </ul>
-            </nav> -->
-            <a href="index.html">
-                    <img href="index.html" class="logo_header" src="untitled.png" alt="Logo GB Site">
-                </a>
+            </nav>
             <form>
                 <!-- <label for="search"></label> -->
                 <!-- Use any element to open the sidenav -->
@@ -53,22 +54,19 @@
                     <p class="title_1 color_link2 datetime">Access date and time</p>
                     <p class="title_1 color_link2 datetime" id="date">Date</p>
                     <p class="title_1 color_link2 datetime" id="time">Time</p>
-                    <br>
-                    <p class="title_1 color_link2 datetime">Network status</p>
-                    <p class="title_1 color_link2 datetime" id="statusNetwork">Online?</p>
                 </div>
             </form>
         </aside>
-    </header> 
+    </header>
 
     <div class="signUpImage">
     </div>
 
-    <form class="loginForm">
-        <input type="text" class="loginTextBox" id="usr" placeholder="Username" required autocomplete="off"><br>
-        <input type="password" class="loginTextBox" id="pwd" placeholder="Password" required autocomplete="off"><br>
-        <button type="button" id="submit" onclick="signup()" class="signUpButtonBody">Create account</button>
-        <a class="color_link5" href="login.html">Login</a>
+    <form class="loginForm" action="auth" method="POST">
+        <input name="username" type="text" class="loginTextBox" id="usr" placeholder="Username" required autocomplete="off" autofocus title="Type an username to access"><br>
+        <input name="password" type="password" class="loginTextBox" id="pwd" placeholder="Password" required autocomplete="off" title="Type a password to access"><br>
+        <input type="submit" id="submit" class="signUpButtonBody" value="Create account">
+        <a class="color_link5" href="login.html" title="Login page">Login</a>
         <p class="color_link4 datetime" id="statusLogin"></p>
     </form>
 
@@ -82,8 +80,5 @@
             </li>
         </ul>
     </footer>
-
     <script src="script.js"></script>
-    <script src="connect.js"></script>
-
 </body>

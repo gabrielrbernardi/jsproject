@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="main">
+<html lang="en" id="main" oncontextmenu="return false" style="overflow: hidden;">
 
 <head>
     <meta charset="utf-8">
@@ -69,8 +69,8 @@
     <form class="loginForm">
         <input type="text" class="loginTextBox" id="usr" placeholder="Username" required autocomplete="off" autofocus title="Type an username to access"><br>
         <input type="password" class="loginTextBox" id="pwd" placeholder="Password" required autocomplete="off" title="Type a password to access"><br>
-        <button type="button" id="submit" onclick="verifyLogin()" class="loginButtonBody">Submit</button>
-        <a class="color_link5" href="signup.html">Sign Up</a>
+        <button type="button" id="submit" onclick="verifyLogin()" class="loginButtonBody">Login</button>
+        <a class="color_link5" href="signup.html" title="SignUp page">Sign Up</a>
         <div id="loader"></div>
 
         <p class="color_link4 datetime" id="statusLogin"></p>

@@ -31,6 +31,11 @@ function data() {
     document.getElementById("demo").innerHTML = d.getDay() + 1;
 }
 
+function navLeftSide(){
+    var element = document.getElementById("footer_page");
+    element.classList.toggle("none_class");
+}
+
 // --------------------------------------------------------------
 /* Set the width of the side navigation to 250px */
 function openNav() {
@@ -40,11 +45,11 @@ function openNav() {
     
     clearInterval(varTime2);
     document.getElementById("mySidenav").style.width = "200px";
-    // Comandos para pegar a data e hora e colocar no html
     document.getElementById("main").style.marginRight = "200px";
     // if(alturaTela < 768){
     //     document.getElementById("nav_body").style.paddingBottom = "50%";
     // }
+    // Comandos para pegar a data e hora e colocar no html
     var d = new Date(),
         dia, mes, ano, hora, minuto;
     dia = d.getDate();
@@ -73,7 +78,6 @@ function openNav() {
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginRight = "0";
     document.getElementById("nav_body").style.paddingBottom = "7%";

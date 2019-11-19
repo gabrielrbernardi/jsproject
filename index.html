@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="assets/prime_icon.ico" />
 </head>
 
-<body id="main">
+<body id="main" unselectable="on" onselectstart="return false;" onmousedown="return false;">
     <header>
         <aside>
             <!-- <nav>
@@ -40,11 +40,6 @@
 
                     <!-- <input type="button" class="loginButton" value="Login" onclick="loginLinks()"></input> -->
                     <input type="button" class="loginButton" value="Login" onclick="redirect()"></input>
-                    <script>
-                        function redirect(){
-                            location.href = "login.html";
-                        }
-                    </script>
                     <p class="title_1 color_link2 datetime">Access date and time</p>
                     <p class="title_1 color_link2 datetime" id="date">Date</p>
                     <p class="title_1 color_link2 datetime" id="time">Time</p>
@@ -63,19 +58,13 @@
             <p class="js" id="teste"></p>
             <br> -->
             <h2 class="title_2">
-                <a class="color_link" onclick="openNav()">Para abrir o menu de navegação, CLIQUE AQUI</a><br>
+                <a class="color_link" onclick="sideNav()">Para abrir o menu de navegação, CLIQUE AQUI</a><br>
             </h2>
             <br>
             <h2 class="title_2">
                 <a class="color_link" onclick="redirect1()">Links Úteis</a><br>
             </h2>
             <br>
-            <script>
-                function redirect1() {
-                    location.href = "links.html";
-                }
-            </script>
-
             <h2 class="title_2">
                 <a class="color_link">Este site, no momento, é utilizado para facilitar a utilização de links de diversos sites.</a>
             </h2><br>
@@ -104,6 +93,24 @@
         </ul>
     </footer>
 
+    <script>
+        function redirect(){
+            location.href = "login.html";
+        }
+        function redirect1() {
+            location.href = "links.html";
+        }
+        function sideNav(){
+            if(sideNavState == 0){
+                sideNavState = 1;
+                openNav();
+            }else{
+                sideNavState = 0;
+                closeNav();
+            }
+        }
+        var sideNavState = 0;
+    </script>
     <script src="script.js">
     </script>
 

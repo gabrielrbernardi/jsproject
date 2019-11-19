@@ -1,6 +1,8 @@
 html{
     margin: 0;
-    padding: 0;
+    /* padding: 0 0 10px 0; */
+    padding-bottom: 50px;
+    overflow-x: hidden;
 }
 body {
     margin: 0;
@@ -104,7 +106,6 @@ aside a {
     background-color: #0d1b31;
     text-align: center;
     padding-bottom: 0;
-    margin-top: 100;   
     display: block;
     position: fixed;
     left: 0;
@@ -127,6 +128,7 @@ aside a {
 
 .footer_text {
     color: #79B8F3;
+    margin-right: 10px;
 }
 
 .footer_ul {
@@ -667,10 +669,24 @@ section h1 a {
     transform: scale(1.05);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     .column {
         width: 100%;
         display: block;
         margin-bottom: 10px;
     }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(112, 112, 112, 0.15);
+        padding: 10px;
+        text-align: left;
+        background-color: #182835;
+    }
+    .card:hover{
+        transform: unset;
+    }
+}
+
+.none_class{
+    display: none;
+    transition: .25s;
 }

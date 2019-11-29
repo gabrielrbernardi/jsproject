@@ -10,6 +10,7 @@ body {
     font-size: 16px;
     background-color: #0e171e;
     color: #949494;
+    transition: .2s;
 }
 
 header {
@@ -592,6 +593,7 @@ section h1 a {
 
 .signUpImage{
     background-image: url("./assets/images/imageSignUp.jpg");
+    /*background-image: url("https://www.goodfreephotos.com/albums/united-states/washington/seattle/panoramic-skyline-of-seattle-washington.jpg");*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -647,7 +649,12 @@ section h1 a {
 /* Remove extra left and right margins, due to padding in columns */
 .row {
     margin: 0;
+    transition: .2s;
 }
+
+/* .row:hover{
+    background-color: #3e474d;
+} */
 
 /* Clear floats after the columns */
 .row:after {
@@ -666,7 +673,7 @@ section h1 a {
 }
 
 .card:hover{
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 @media screen and (max-width: 800px) {
@@ -689,4 +696,51 @@ section h1 a {
 .none_class{
     display: none;
     transition: .25s;
+}
+
+:root{
+    --minWidthSnackbar: 350px;
+}
+
+#snackbar{
+    visibility: hidden;
+    min-width: minWidthSnackbar; /* Set a default minimum width */
+    margin-left: calc(-1 * var(--minWidthSnackbar) / 2);; /* Divide value of min-width by 2 */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 51px;
+}
+
+#snackbar.showSnackbar{
+    visibility: visible;
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    /* -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s; */
+    animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 51px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 51px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 51px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 51px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
 }

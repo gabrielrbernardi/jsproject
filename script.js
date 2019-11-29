@@ -138,7 +138,7 @@ var loginUsers = [{
     }
 ]
 
-var interval = 500;
+var interval = 750;
 
 function verifyLogin() {
     var usr = document.getElementById("usr").value;
@@ -148,8 +148,9 @@ function verifyLogin() {
     document.getElementById("statusLogin").style.color = "";
     if(usr == "" || pwd == ""){
         loaderFunction();
+        msg = "OS CAMPOS DEVEM SER PREENCHIDOS";
         setTimeout(function() {
-            document.getElementById("statusLogin").innerHTML = "OS CAMPOS ACIMA<br>DEVEM SER PREENHIDOS";
+            snackbarActivate(msg);
             document.getElementById("statusLogin").style.color = "rgb(206, 0, 0)";
             loaderFunction();
             // location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
@@ -163,6 +164,9 @@ function verifyLogin() {
                 document.getElementById("statusLogin").innerHTML = "ACESSO AUTORIZADO";
                 document.getElementById("statusLogin").style.color = "rgb(27, 255, 35)";
                 loaderFunction();
+                setTimeout(function(){
+                    location.assign("./links.html");
+                }, interval);
                 // location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
             }, interval);
             return;
@@ -191,3 +195,17 @@ document.getElementById("usr").onkeydown = function(e) {
         verifyLogin();
     }
 };
+
+function snackbarActivate(msg){
+    var val = document.getElementById("snackbar");
+    val.className = "showSnackbar";
+    document.getElementById("snackbar").innerHTML = msg;
+    // setTimeout(function(){
+    //     val.className = val.className.replace("showSnackbar", "");
+    // }, 5000);
+}
+
+//Prompt para confirmar a saida quando o usuario tentar recarregar ou sair da pagina
+// window.onbeforeunload = function(){
+//     return 'Are you sure you want to leave?';
+// };

@@ -2,24 +2,25 @@
 <html lang="en" id="main" oncontextmenu="return false;">
 <!-- <html lang="en" id="main"> -->
 
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" name="viewport" />
-        <link rel="stylesheet" href="styles.css">
-        <title>Links Úteis</title>
-        <link rel="shortcut icon" href="assets/prime_icon.ico"/>
-    </head>
-    <!-- 
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Links Úteis</title>
+    <link rel="shortcut icon" href="assets/prime_icon.ico" />
+</head>
+<!-- 
         DICIONARIO
         ddm -> DropDown Menu
     -->
-    <body unselectable="on" onselectstart="return false;" onmousedown="return false;">
-        <header>
-            <aside>
-                <a href="index.html">
-                    <img href="index.html" class="logo_header" src="untitled.png" alt="Logo GB Site">
-                </a>
-                <!-- <nav>
+
+<body unselectable="on" onselectstart="return false;" onmousedown="return false;">
+    <header>
+        <aside>
+            <a href="index.html">
+                <img href="index.html" class="logo_header" src="untitled.png" alt="Logo GB Site">
+            </a>
+            <!-- <nav>
                     <ul>
                         <li><a href="index.html">Início</a></li>
                         <li><a href="index.html">Séries</a></li>
@@ -29,186 +30,188 @@
                         <li><a href="#">Links Úteis</a></li>
                     </ul>
                 </nav> -->
-                <form>
-                    <!-- <label for="search"></label> -->
-                    <!-- Use any element to open the sidenav -->
-                    <div class="menu_button1" onclick="openNav()">
-                        <div class="menu_button"></div>
-                        <div class="menu_button"></div>
-                        <div class="menu_button"></div>
-                    </div>
-                    <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="links.html">Links Úteis</a></li>
-
-                        <!-- <input type="button" class="loginButton" value="Login" onclick="loginLinks()"></input> -->
-                        <input type="button" class="loginButton" value="Login" onclick="redirect()"></input>
-                        <script>
-                            function redirect(){
-                                location.href = "login.html";
-                            }
-                        </script>
-                        <p class="title_1 color_link2 datetime">Access date and time</p>
-                        <p class="title_1 color_link2 datetime" id="date">Date</p>
-                        <p class="title_1 color_link2 datetime" id="time">Time</p>
-                        <br>
-                        <p class="title_1 color_link2 datetime">Network status</p>
-                        <p class="title_1 color_link2 datetime" id="statusNetwork">Online?</p>
-                    </div>
-                </form>
-            </aside>
-        </header>   
-
-        <div class="row">
-            <h2 class="title_2">
-                <a class="color_link3 toUpperCase" style="padding-left: 10px;">links úteis</a><br>
-            </h2>
-            <div class="column">
-                <div class="card">
-                    <h2 class="title_2">
-                        <a class="color_link" href="https://www.urionlinejudge.com.br/" target="_blank">URI Online Judge</a><br>
-                        <div class="dropdown_menu" onmouseover="navLeftSide()" onmouseout="navLeftSide()">
-                                <h2 class="title_2">
-                                    <a class="color_link3">Languages</a>
-                                </h2>
-                                <div class="dropdown_menu_content">
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link3">PYTHON</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="https://penseallen.github.io/PensePython2e/" target="_blank">Livro Pense em Python</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link3">Curso em Video</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6" target="_blank">Mundo 1</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dk_nZHmxxf_J0WRAqy5Czye" target="_blank">Mundo 2</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dksnH2jVTIVNviIMBVYyFnH" target="_blank">Mundo 3</a>
-                                    </h2><br>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link3">JAVA</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="http://www.facom.ufu.br/~bacala/POO/index.htm" target="_blank">Java POO Bacala<br></a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="http://www.facom.ufu.br/~elaine/disc/POO/POO.html" target="_blank">Java POO Elaine<br></a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="https://www.w3schools.com/java/default.asp" target="_blank">Java W3Schools<br></a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link3">Curso em Video</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR" target="_blank">Java Básico</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY" target="_blank">Java POO<br></a>
-                                    </h2><br>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link3">MySQL</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="https://www.w3schools.com/sql/default.asp" target="_blank">SQL Language W3Schools</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link3">Curso em Video</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkBs-795Dsgvau_ekxg8g1r" target="_blank">Banco de Dados</a>
-                                    </h2><br>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link3">JAVASCRIPT</a>
-                                    </h2>
-                                    <h2 class="title_2_ddm">
-                                        <a class="color_link" href="https://www.w3schools.com/js/default.asp" target="_blank">JavaScript Tutorial</a><br>
-                                        <a class="color_link" href="https://www.w3schools.com/jsref/default.asp" target="_blank">JS References</a><br>
-                                        <a class="color_link" href="https://www.w3schools.com/nodejs/default.asp" target="_blank">NodeJS Tutorial</a>
-                                    </h2>
-                                </div>
-                            </div><br><br>
-                        <a class="color_link" href="http://dontpad.com/grbernardi" target="_blank">Dontpad</a><br>
-                        <a class="color_link" href="https://hacktoberfest.digitalocean.com/profile" target="_blank">Hacktoberfest 2019</a><br>
-                    </h2>
+            <form>
+                <!-- <label for="search"></label> -->
+                <!-- Use any element to open the sidenav -->
+                <div class="menu_button1" onclick="openNav()">
+                    <div class="menu_button"></div>
+                    <div class="menu_button"></div>
+                    <div class="menu_button"></div>
                 </div>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="links.html">Links Úteis</a></li>
+
+                    <!-- <input type="button" class="loginButton" value="Login" onclick="loginLinks()"></input> -->
+                    <input type="button" class="loginButton" value="Login" onclick="redirect()"></input>
+                    <script>
+                        function redirect() {
+                            location.href = "login.html";
+                        }
+                    </script>
+                    <p class="title_1 color_link2 datetime">Access date and time</p>
+                    <p class="title_1 color_link2 datetime" id="date">Date</p>
+                    <p class="title_1 color_link2 datetime" id="time">Time</p>
+                    <br>
+                    <p class="title_1 color_link2 datetime">Network status</p>
+                    <p class="title_1 color_link2 datetime" id="statusNetwork">Online?</p>
+                </div>
+            </form>
+        </aside>
+    </header>
+
+    <div class="row">
+        <h2 class="title_2">
+            <a class="color_link3 toUpperCase" style="padding-left: 10px;">links úteis</a><br>
+        </h2>
+        <div class="column">
+            <div class="card">
+                <h2 class="title_2">
+                    <a class="color_link" href="https://www.urionlinejudge.com.br/" target="_blank">URI Online Judge</a><br>
+                    <div class="dropdown_menu" onmouseover="navLeftSide()" onmouseout="navLeftSide()">
+                        <h2 class="title_2">
+                            <a class="color_link3">Languages</a>
+                        </h2>
+                        <div class="dropdown_menu_content">
+                            <h2 class="title_2_ddm">
+                                <a class="color_link3">PYTHON</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="https://penseallen.github.io/PensePython2e/" target="_blank">Livro Pense em Python</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link3">Curso em Video</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6" target="_blank">Mundo 1</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dk_nZHmxxf_J0WRAqy5Czye" target="_blank">Mundo 2</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dksnH2jVTIVNviIMBVYyFnH" target="_blank">Mundo 3</a>
+                            </h2><br>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link3">JAVA</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="http://www.facom.ufu.br/~bacala/POO/index.htm" target="_blank">Java POO Bacala<br></a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="http://www.facom.ufu.br/~elaine/disc/POO/POO.html" target="_blank">Java POO Elaine<br></a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="https://www.w3schools.com/java/default.asp" target="_blank">Java W3Schools<br></a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link3">Curso em Video</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR" target="_blank">Java Básico</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY" target="_blank">Java POO<br></a>
+                            </h2><br>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link3">MySQL</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="https://www.w3schools.com/sql/default.asp" target="_blank">SQL Language W3Schools</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link3">Curso em Video</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkBs-795Dsgvau_ekxg8g1r" target="_blank">Banco de Dados</a>
+                            </h2><br>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link3">JAVASCRIPT</a>
+                            </h2>
+                            <h2 class="title_2_ddm">
+                                <a class="color_link" href="https://www.w3schools.com/js/default.asp" target="_blank">JavaScript Tutorial</a><br>
+                                <a class="color_link" href="https://www.w3schools.com/jsref/default.asp" target="_blank">JS References</a><br>
+                                <a class="color_link" href="https://www.w3schools.com/nodejs/default.asp" target="_blank">NodeJS Tutorial</a>
+                            </h2>
+                        </div>
+                    </div><br><br>
+                    <a class="color_link" href="http://dontpad.com/grbernardi" target="_blank">Dontpad</a><br>
+                    <a class="color_link" href="https://hacktoberfest.digitalocean.com/profile" target="_blank">Hacktoberfest 2019</a><br>
+                </h2>
             </div>
-            <div class="column">
-                <div class="card">
-                    <h2 class="title_2">
-                        <!-- <a class="color_link4">Informações</a><br>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 class="title_2">
+                    <!-- <a class="color_link4">Informações</a><br>
                         <a class="color_link2">Python: Completed</a><br>
                         <a class="color_link2">Java: Completed</a><br>
                         <a class="color_link2">NodeJS: In Progress</a><br>
                         <a class="color_link2">MySQL: In Progress</a><br>
                         <br> -->
-                        <a class="color_link4">Extras</a><br>
-                        <a class="color_link" href="https://cloud.ibm.com" target="_blank">IBM Cloud</a><br>
-                        <br>
-                        <a class="color_link" href="https://www.w3schools.com/jsref/default.asp" target="_blank">JavaScript: References</a><br>
-                        <a class="color_link" href="https://www.w3schools.com/nodejs/nodejs_http.asp" target="_blank">NodeJS: HTTP Module</a><br>
-                        <a class="color_link" href="https://www.w3schools.com/sql/sql_alter.asp" target="_blank">SQL language: Alter Table</a><br>
-                        <a class="color_link" href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where" target="_blank">SQL Live Code Editor</a><br>
-                        <a class="color_link3">Only works on Google Chrome</a><br>
-                    </h2>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h2 class="title_2">
-                        <a class="color_link4">Links UFU</a><br>
-                        <a class="color_link6" href="http://www.facom.ufu.br/~bacala/POO/index.htm" target="_blank">POO</a><br>
-                        <a class="color_link6" href="http://www.facom.ufu.br/~backes/gbc034.html" target="_blank">AED2</a><br><br>
-                        <a class="color_link4">Links GitHub</a><br>
-                        <a class="color_link6" href="https://github.com/gabrielrbernardi/jsproject" target="_blank">JS Project</a><br>
-                        <a class="color_link6" href="https://github.com/gabrielrbernardi/JavaForca" title="Forca">POO: Trabalho 1</a><br>
-                        <a class="color_link6" href="https://github.com/gabrielrbernardi/trabalhoPOO2" target="_blank" title="Folha de pagamento">POO: Trabalho 2</a><br>
-                        <a class="color_link6" href="https://github.com/gabrielrbernardi/AOC1_MIPS" target="_blank">AOC1 MIPS</a><br>
-                        <a class="color_link6" href="https://github.com/gabrielrbernardi/FuncionalHaskell" target="_blank">PF Haskell</a> 
-                    </h2>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h2 class="title_2">
-                        <a class="color_link4">Estudo atual</a><br>
-                        <a class="color_link6" href="https://www.luiztools.com.br/post/como-usar-nodejs-mysql/" target="_blank">NodeJS + MySQL</a><br>
-                        <!-- <button class="loginButton" onclick="snackbarActivate()">Teste</button> -->
-                        <a class="color_link6" href="https://gabrielrbernardi.github.io/GBChecker/" target="_blank">GB Checker</a> 
-                    </h2>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h2 class="title_2">
-                        <a class="color_link4">Migracao HD->SSD</a><br>
-                        <br>
-                        <a class="color_link4">Windows</a><br>
-                        <a class="color_link6" href="https://support.microsoft.com/pt-br/help/20530/windows-10-reactivating-after-hardware-change">Reativando após alteracao de hardware</a><br>
-                        <a class="color_link6" href="https://answers.microsoft.com/pt-br/windows/forum/windows_10-windows_install/realizando-o-download-e-instala%c3%a7%c3%a3o-do/7d4e508c-e422-4b37-abed-035797962585">Download e ativacao</a><br>
-                        <a class="color_link6" href="https://answers.microsoft.com/pt-br/windows/forum/windows_10-windows_install-winpc/ativando-o-windows-10-ap%C3%B3s-trocar-um-hd-por/518fd139-eeb7-40b3-973a-f8f128c51711">Troca HD -> SSD</a><br>
-                        <a class="color_link6" href="https://www.google.com/search?client=ubuntu&channel=fs&q=windows+hd+to+ssd&ie=utf-8&oe=utf-8">GoogleSearch HD->SSD</a>
-                    </h2>
-                </div>
+                    <a class="color_link4">Extras</a><br>
+                    <a class="color_link" href="https://cloud.ibm.com" target="_blank">IBM Cloud</a><br>
+                    <br>
+                    <a class="color_link" href="https://www.w3schools.com/jsref/default.asp" target="_blank">JavaScript: References</a><br>
+                    <a class="color_link" href="https://www.w3schools.com/nodejs/nodejs_http.asp" target="_blank">NodeJS: HTTP Module</a><br>
+                    <a class="color_link" href="https://www.w3schools.com/sql/sql_alter.asp" target="_blank">SQL language: Alter Table</a><br>
+                    <a class="color_link" href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where" target="_blank">SQL Live Code Editor</a><br>
+                    <a class="color_link3">Only works on Google Chrome</a><br>
+                </h2>
             </div>
         </div>
-    </body>
-    <footer class="footer_page" id="footer_page">
-        <ul class="footer_ul">
-            <li><a class="footer_text" href="https://github.com/gabrielrbernardi" target="_blank">GitHub</a></li>
-            <li><a class="footer_text" href="https://github.com/gabrielrbernardi/jsproject" target="_blank">JS Project</a></li>
-            <li><a class="footer_text" href="error.html">Help</a></li>
-            <li>
-                <p>&copy; 2019, Gabriel Bernardi</p>
-            </li>
-        </ul>
-    </footer>
-    
-    <script src="script.js"></script>
+        <div class="column">
+            <div class="card">
+                <h2 class="title_2">
+                    <a class="color_link4">Links UFU</a><br>
+                    <a class="color_link6" href="http://www.facom.ufu.br/~bacala/POO/index.htm" target="_blank">POO</a><br>
+                    <a class="color_link6" href="http://www.facom.ufu.br/~backes/gbc034.html" target="_blank">AED2</a><br><br>
+                    <a class="color_link4">Links GitHub</a><br>
+                    <a class="color_link6" href="https://github.com/gabrielrbernardi/jsproject" target="_blank">JS Project</a><br>
+                    <a class="color_link6" href="https://github.com/gabrielrbernardi/JavaForca" title="Forca">POO: Trabalho 1</a><br>
+                    <a class="color_link6" href="https://github.com/gabrielrbernardi/trabalhoPOO2" target="_blank" title="Folha de pagamento">POO: Trabalho 2</a><br>
+                    <a class="color_link6" href="https://github.com/gabrielrbernardi/AOC1_MIPS" target="_blank">AOC1 MIPS</a><br>
+                    <a class="color_link6" href="https://github.com/gabrielrbernardi/FuncionalHaskell" target="_blank">PF Haskell</a>
+                </h2>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 class="title_2">
+                    <a class="color_link4">Estudo atual</a><br>
+                    <a class="color_link6" href="https://www.luiztools.com.br/post/como-usar-nodejs-mysql/" target="_blank">NodeJS + MySQL</a><br>
+                    <!-- <button class="loginButton" onclick="snackbarActivate()">Teste</button> -->
+                    <a class="color_link6" href="https://gabrielrbernardi.github.io/GBChecker/" target="_blank">GB Checker</a><br>
+                    <a class="color_link6" href="https://github.com/gabrielrbernardi/CRUDJSProject" target="_blank">CRUD JS Project</a>
+                </h2>
+            </div>
+        </div>
+        <div class="column hided">
+            <div class="card ">
+                <h2 class="title_2 ">
+                    <a class="color_link4 ">Migracao HD->SSD</a><br>
+                    <br>
+                    <a class="color_link4 ">Windows</a><br>
+                    <a class="color_link6 " href="https://support.microsoft.com/pt-br/help/20530/windows-10-reactivating-after-hardware-change ">Reativando após alteracao de hardware</a><br>
+                    <a class="color_link6 " href="https://answers.microsoft.com/pt-br/windows/forum/windows_10-windows_install/realizando-o-download-e-instala%c3%a7%c3%a3o-do/7d4e508c-e422-4b37-abed-035797962585 ">Download e ativacao</a><br>
+                    <a class="color_link6 " href="https://answers.microsoft.com/pt-br/windows/forum/windows_10-windows_install-winpc/ativando-o-windows-10-ap%C3%B3s-trocar-um-hd-por/518fd139-eeb7-40b3-973a-f8f128c51711 ">Troca HD -> SSD</a><br>
+                    <a class="color_link6 " href="https://www.google.com/search?client=ubuntu&channel=fs&q=windows+hd+to+ssd&ie=utf-8&oe=utf-8 ">GoogleSearch HD->SSD</a>
+                </h2>
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="footer_page " id="footer_page ">
+    <ul class="footer_ul ">
+        <li><a class="footer_text " href="https://github.com/gabrielrbernardi " target="_blank ">GitHub</a></li>
+        <li><a class="footer_text " href="https://github.com/gabrielrbernardi/jsproject " target="_blank ">JS Project</a></li>
+        <li><a class="footer_text " href="error.html ">Help</a></li>
+        <li>
+            <p>&copy; 2019, Gabriel Bernardi</p>
+        </li>
+    </ul>
+</footer>
+
+<script src="script.js "></script>
+
 </html>

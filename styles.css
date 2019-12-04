@@ -1,9 +1,10 @@
-html{
+html {
     margin: 0;
     /* padding: 0 0 10px 0; */
     padding-bottom: 50px;
     overflow-x: hidden;
 }
+
 body {
     margin: 0;
     font-family: Amazon Ember Regular, Arial, sans-serif;
@@ -20,7 +21,7 @@ header {
     padding-bottom: 0px;
     padding-right: 0;
     position: static;
-    top:0;
+    top: 0;
     z-index: 1;
 }
 
@@ -74,7 +75,7 @@ aside img {
 
 ul {
     list-style: none;
-    padding:0;
+    padding: 0;
 }
 
 li {
@@ -268,22 +269,23 @@ section h1 a {
     cursor: default;
 }
 
-.color_link5{
+.color_link5 {
     color: #333333;
 }
 
-.color_link6{
+.color_link6 {
     color: #969696;
     cursor: pointer;
 }
 
-.toUpperCase{
+.toUpperCase {
     text-transform: uppercase;
 }
 
-.toLowerCase{
+.toLowerCase {
     text-transform: lowercase;
 }
+
 
 /* .color_link6{                    stick element
     position: sticky;
@@ -292,11 +294,11 @@ section h1 a {
     left: 40px;
 } */
 
-.color_link5:hover{
+.color_link5:hover {
     color: #c3c3c3;
 }
 
-.nav_global{
+.nav_global {
     /* float: top;
     margin-bottom: 10%; */
     display: block;
@@ -307,7 +309,7 @@ section h1 a {
     /* padding: 20px; */
     /* padding-bottom: 5%; */
     /* max-width: 400px; */
-    /* background-color: #172631; */    
+    /* background-color: #172631; */
 }
 
 .nav_body {
@@ -436,6 +438,7 @@ section h1 a {
     transition: .25s;
 }
 
+
 /* The side navigation menu */
 
 .sidenav {
@@ -503,7 +506,7 @@ section h1 a {
     transform: scale(1.2);
 }
 
-.loginButton:focus{
+.loginButton:focus {
     background-color: #b4b4b4;
     color: black;
 }
@@ -516,7 +519,7 @@ section h1 a {
     transition: margin-right .5s;
 }
 
-.loginButtonBody{
+.loginButtonBody {
     margin-left: 30px;
     padding: 0px;
     border: none;
@@ -530,13 +533,13 @@ section h1 a {
     height: 25px;
 }
 
-.loginButtonBody:hover{
+.loginButtonBody:hover {
     background-color: #929292;
     color: black;
     transform: scale(1.1);
 }
 
-.signUpButtonBody{
+.signUpButtonBody {
     margin-left: 30px;
     padding: 0px;
     border: none;
@@ -550,13 +553,13 @@ section h1 a {
     height: 25px;
 }
 
-.signUpButtonBody:hover{
+.signUpButtonBody:hover {
     background-color: #929292;
     color: black;
     /* transform: scale(1.05); */
 }
 
-.loginTextBox{
+.loginTextBox {
     border-radius: 30px;
     /* border-width: 1px; */
     background-color: #dfdfdf;
@@ -571,14 +574,14 @@ section h1 a {
     height: 20px;
 }
 
-.loginTextBox:focus{
+.loginTextBox:focus {
     background-color: #cfcfcf;
     opacity: .5;
     color: black;
     transform: scale(1.2);
 }
 
-.loginImage{
+.loginImage {
     background-image: url("./assets/images/imageLogin.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -591,7 +594,7 @@ section h1 a {
     -webkit-filter: blur(1px); */
 }
 
-.signUpImage{
+.signUpImage {
     background-image: url("./assets/images/imageSignUp.jpg");
     /*background-image: url("https://www.goodfreephotos.com/albums/united-states/washington/seattle/panoramic-skyline-of-seattle-washington.jpg");*/
     background-position: center;
@@ -605,7 +608,7 @@ section h1 a {
     -webkit-filter: blur(1px); */
 }
 
-.loginForm{
+.loginForm {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -616,27 +619,33 @@ section h1 a {
     transition: .2s;
 }
 
-#statusLogin{
+#statusLogin {
     transition: .8s ease 0s;
 }
 
 .loader {
     margin-left: 121px;
     margin-top: 10px;
-    border: 3px solid #f3f3f3; /* background color of spin */
-    border-top: 3px solid #707070; /*color that will be spin*/
+    border: 3px solid #f3f3f3;
+    /* background color of spin */
+    border-top: 3px solid #707070;
+    /*color that will be spin*/
     border-radius: 50%;
     width: 20px;
     height: 20px;
     animation: spin 1s linear infinite;
 }
-  
+
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -646,24 +655,31 @@ section h1 a {
     padding: 10px 10px;
 }
 
+
 /* Remove extra left and right margins, due to padding in columns */
+
 .row {
     margin: 0;
     transition: .2s;
 }
 
+
 /* .row:hover{
     background-color: #3e474d;
 } */
 
+
 /* Clear floats after the columns */
+
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
+
 /* Style the counter cards */
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(112, 112, 112, 0.15);
     padding: 10px;
@@ -672,7 +688,7 @@ section h1 a {
     transition: transform .25s;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.03);
 }
 
@@ -688,24 +704,27 @@ section h1 a {
         text-align: left;
         background-color: #182835;
     }
-    .card:hover{
+    .card:hover {
         transform: unset;
     }
 }
 
-.none_class{
+.none_class {
     display: none;
     transition: .25s;
 }
 
-:root{
+:root {
     --minWidthSnackbar: 350px;
 }
 
-#snackbar{
+#snackbar {
     visibility: hidden;
-    min-width: minWidthSnackbar; /* Set a default minimum width */
-    margin-left: calc(-1 * var(--minWidthSnackbar) / 2);; /* Divide value of min-width by 2 */
+    min-width: minWidthSnackbar;
+    /* Set a default minimum width */
+    margin-left: calc(-1 * var(--minWidthSnackbar) / 2);
+    ;
+    /* Divide value of min-width by 2 */
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -717,7 +736,7 @@ section h1 a {
     bottom: 51px;
 }
 
-#snackbar.showSnackbar{
+#snackbar.showSnackbar {
     visibility: visible;
     /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
     However, delay the fade out process for 2.5 seconds */
@@ -726,21 +745,49 @@ section h1 a {
 }
 
 @-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 51px; opacity: 1;}
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 51px;
+        opacity: 1;
+    }
 }
 
 @keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 51px; opacity: 1;}
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 51px;
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeout {
-    from {bottom: 51px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
+    from {
+        bottom: 51px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
 }
 
 @keyframes fadeout {
-    from {bottom: 51px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
+    from {
+        bottom: 51px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+.hided {
+    display: none;
 }

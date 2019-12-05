@@ -31,7 +31,7 @@ function data() {
     document.getElementById("demo").innerHTML = d.getDay() + 1;
 }
 
-function navLeftSide(){
+function navLeftSide() {
     var element = document.getElementById("footer_page");
     element.classList.toggle("none_class");
 }
@@ -42,7 +42,7 @@ function openNav() {
     var alturaTela = screen.height;
     //development test
     // document.getElementById("height").innerHTML = alturaTela;
-    
+
     clearInterval(varTime2);
     document.getElementById("mySidenav").style.width = "200px";
     document.getElementById("main").style.marginRight = "200px";
@@ -69,9 +69,9 @@ function openNav() {
     }
     document.getElementById("time").innerHTML = hora + ':' + minuto; //inserindo o horario no HTML
     var x = navigator.onLine;
-    if(x){
+    if (x) {
         document.getElementById("statusNetwork").innerHTML = "You're online";
-    }else{
+    } else {
         document.getElementById("statusNetwork").innerHTML = "You're offline";
     }
 }
@@ -146,7 +146,7 @@ function verifyLogin() {
     usr = usr.toLowerCase();
     document.getElementById("statusLogin").innerHTML = "";
     document.getElementById("statusLogin").style.color = "";
-    if(usr == "" || pwd == ""){
+    if (usr == "" || pwd == "") {
         loaderFunction();
         msg = "OS CAMPOS DEVEM SER PREENCHIDOS";
         setTimeout(function() {
@@ -164,7 +164,7 @@ function verifyLogin() {
                 document.getElementById("statusLogin").innerHTML = "ACESSO AUTORIZADO";
                 document.getElementById("statusLogin").style.color = "rgb(27, 255, 35)";
                 loaderFunction();
-                setTimeout(function(){
+                setTimeout(function() {
                     location.assign("./links.html");
                 }, interval);
                 // location.assign("https://github.com/gabrielrbernardi/trabalhoPOO2");
@@ -173,13 +173,13 @@ function verifyLogin() {
         }
     }
     loaderFunction();
-    setTimeout(function(){
+    setTimeout(function() {
         document.getElementById("statusLogin").innerHTML = "ACESSO NEGADO";
         document.getElementById("statusLogin").style.color = "rgb(206, 0, 0)";
         loaderFunction();
     }, interval);
-        // setTimeout(function(){
-            //     document.getElementById("statusLogin").innerHTML = "";
+    // setTimeout(function(){
+    //     document.getElementById("statusLogin").innerHTML = "";
     //     document.getElementById("statusLogin").style.color = "";
     // }, 2000);
 }
@@ -196,7 +196,7 @@ document.getElementById("usr").onkeydown = function(e) {
     }
 };
 
-function snackbarActivate(msg){
+function snackbarActivate(msg) {
     var val = document.getElementById("snackbar");
     val.className = "showSnackbar";
     document.getElementById("snackbar").innerHTML = msg;
@@ -209,3 +209,11 @@ function snackbarActivate(msg){
 // window.onbeforeunload = function(){
 //     return 'Are you sure you want to leave?';
 // };
+
+function openOverlay(){
+    document.getElementById("overlay").style.display = "block";
+}
+
+function closeOverlay() {
+    document.getElementById("overlay").style.display = "none";
+}

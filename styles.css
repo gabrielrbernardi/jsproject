@@ -1,19 +1,830 @@
-*{
-    transition: .2s ease;
+html {
+    margin: 0;
+    /* padding: 0 0 10px 0; */
+    padding-bottom: 50px;
+    overflow-x: hidden;
 }
 
-.container-fluid{
-    background-color: rgb(241, 241, 241);
+body {
+    margin: 0;
+    font-family: Amazon Ember Regular, Arial, sans-serif;
+    font-size: 16px;
+    background-color: #0e171e;
+    color: #949494;
+    transition: .2s;
 }
 
-.card-link{
-    color: grey;
+header {
+    background-color: #1a222d;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0;
+    position: static;
+    top: 0;
+    z-index: 1;
 }
 
-.toast{
+.logo_header {
+    vertical-align: bottom;
+    margin-left: 0;
+    width: 140px;
+    height: 75px;
     opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    cursor: pointer;
+    margin-right: 0;
+    margin-bottom: 0;
+    position: relative;
 }
 
-.cursor-pointer{
+.logo_header:hover {
+    opacity: .5;
+}
+
+header nav {
+    margin: 0;
+    display: inline-block;
+}
+
+header form {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 2px;
+    margin-right: 60px;
+}
+
+header form input {
+    padding: 10px;
+    background-color: #1a222d;
+    border: 1px solid #2b3742;
+    color: #ccc;
+    width: 200px;
+    outline: none;
+    font-size: 100%;
+}
+
+aside img {
+    height: 27px;
+    margin-bottom: -49px;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity .5 ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
     cursor: pointer;
+}
+
+a:hover {
+    opacity: .75;
+}
+
+aside a {
+    color: #f1f1f1;
+    padding: 5px;
+}
+
+
+/* Alterar a propriedade 'top' no caso de a pagina ficar desconfigurada */
+
+.footer_page {
+    background-color: #0d1b31;
+    text-align: center;
+    padding-bottom: 0;
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    z-index: 0;
+    /* background-color: #0d1b31;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+    text-align: center; */
+}
+
+.footer_text {
+    color: #79B8F3;
+    margin-right: 10px;
+}
+
+.footer_ul {
+    margin: 0;
+}
+
+main {
+    margin: auto;
+    padding: 0;
+    text-align: left;
+}
+
+section h1 {
+    text-align: left;
+    color: #f1f1f1;
+    margin: 0;
+    padding-left: 45px;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+section ul {
+    width: max-content;
+    margin-top: 10px;
+}
+
+section h1 a {
+    color: #79B8F3;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.main-banner {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.main-banner img {
+    transition: transform .3s ease;
+}
+
+.main-banner:hover img {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.movie-img {
+    width: 300px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.movie-img:hover {
+    opacity: 0.6;
+}
+
+.delete-icon {
+    width: 50px;
+    position: absolute;
+    top: 60px;
+    left: 115px;
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.editable-list-element .movie-img {
+    opacity: 0.2;
+}
+
+.editable-list-element .delete-icon {
+    display: inline;
+}
+
+.title_1 {
+    color: #f1f1f1;
+    width: 430px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.title_1:hover {
+    opacity: .5;
+}
+
+.title_2 {
+    color: #f1f1f1;
+    min-width: 19px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+.title_2_index {
+    color: #f1f1f1;
+    min-width: 19px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 20px;
+    width: 430px;
+}
+
+.title_2_ddm {
+    color: #f1f1f1;
+    min-width: 19px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+.title_1:hover {
+    opacity: .5;
+}
+
+.img_hover {
+    vertical-align: middle;
+}
+
+.color_link {
+    color: #f1f1f1;
+}
+
+.color_link2 {
+    color: #969696;
+    cursor: not-allowed;
+    /*    cursor: default;*/
+}
+
+.color_link3 {
+    color: #969696;
+    cursor: default;
+}
+
+.color_link4 {
+    color: #f1f1f1;
+    cursor: default;
+}
+
+.color_link5 {
+    color: #333333;
+}
+
+.color_link6 {
+    color: #969696;
+    cursor: pointer;
+}
+
+.toUpperCase {
+    text-transform: uppercase;
+}
+
+.toLowerCase {
+    text-transform: lowercase;
+}
+
+
+/* .color_link6{                    stick element
+    position: sticky;
+    color: white;
+    top: 40px;
+    left: 40px;
+} */
+
+.color_link5:hover {
+    color: #c3c3c3;
+}
+
+.nav_global {
+    /* float: top;
+    margin-bottom: 10%; */
+    display: block;
+    /* margin-bottom: 50px; */
+    overflow: visible;
+    flex: 1 0 auto;
+    max-width: 600px;
+    /* padding: 20px; */
+    /* padding-bottom: 5%; */
+    /* max-width: 400px; */
+    /* background-color: #172631; */
+}
+
+.nav_body {
+    /* float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    overflow: visible;
+    padding-bottom: 1%;
+    /* float: left; */
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow: visible;
+    /* padding-bottom: 10%; */
+    /* background-color: gray; */
+}
+
+.dropdown {
+    position: relative;
+    /* display: inline-block; */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+.show {
+    display: block;
+}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown1-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown1-content a:hover {
+    background-color: #ddd
+}
+
+.dropdown_menu {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 20px;
+    /* padding-bottom: 20px; */
+}
+
+.dropdown_menu_content {
+    display: none;
+    position: absolute;
+    background-color: #344654;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding-right: 1px;
+    padding-left: 6px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+    z-index: 1;
+    margin-top: 0px;
+}
+
+.dropdown_menu:hover .dropdown_menu_content {
+    display: block;
+}
+
+.previewPage {
+    margin-left: 5px;
+    height: 453px;
+    width: 99%;
+    resize: both;
+    /* overflow: auto; */
+}
+
+
+/* BARRA DE NAVEGACAO / NAVIGATION BAR */
+
+.menu_button1:hover {
+    opacity: 0.5;
+}
+
+.menu_button {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.menu_button1 {
+    margin: 6px -35px 0 0;
+    display: inline-block;
+    cursor: pointer;
+    transition: .25s;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #273f51;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.25s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.loginButton {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    padding: 0px;
+    border: none;
+    background-color: #6d6d6d;
+    color: #f1f1f1;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+}
+
+.loginButton:hover {
+    background-color: #b4b4b4;
+    color: black;
+    transform: scale(1.2);
+}
+
+.loginButton:focus {
+    background-color: #b4b4b4;
+    color: black;
+}
+
+.datetime {
+    margin-left: 30px;
+}
+
+#main {
+    transition: margin-right .5s;
+}
+
+.loginButtonBody {
+    margin-left: 30px;
+    padding: 0px;
+    border: none;
+    background-color: #6d6d6d;
+    color: #f1f1f1;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+}
+
+.loginButtonBody:hover {
+    background-color: #929292;
+    color: black;
+    transform: scale(1.1);
+}
+
+.signUpButtonBody {
+    /* margin-left: 30px; */
+    padding: 0px;
+    border: none;
+    background-color: #6d6d6d;
+    color: #f1f1f1;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    min-width: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 25px;
+}
+
+.signUpButtonBody:hover {
+    background-color: #929292;
+    color: black;
+    /* transform: scale(1.05); */
+}
+
+.loginTextBox {
+    border-radius: 30px;
+    /* border-width: 1px; */
+    background-color: #dfdfdf;
+    opacity: .99;
+    color: #555555;
+    font-family: Amazon Ember Regular, Arial, sans-serif;
+    font-size: 16px;
+    transition: .2s;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 20px;
+}
+
+.loginTextBox:focus {
+    background-color: #cfcfcf;
+    opacity: .5;
+    color: black;
+    transform: scale(1.2);
+}
+
+.loginImage {
+    background-image: url("./assets/images/imageLogin.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    /* height: 530px; */
+    height: 93vh;
+    /* filter: blur(1px);
+    -webkit-filter: blur(1px); */
+}
+
+.signUpImage {
+    background-image: url("./assets/images/imageSignUp.jpg");
+    /*background-image: url("https://www.goodfreephotos.com/albums/united-states/washington/seattle/panoramic-skyline-of-seattle-washington.jpg");*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    /* height: 530px; */
+    height: 93vh;
+    /* filter: blur(1px);
+    -webkit-filter: blur(1px); */
+}
+
+.loginForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #a1a1a1cc;
+    padding: 10px 27px 0px 0px;
+    transition: .2s;
+}
+
+#statusLogin {
+    transition: .8s ease 0s;
+}
+
+.loader {
+    margin-left: 121px;
+    margin-top: 10px;
+    border: 3px solid #f3f3f3;
+    /* background color of spin */
+    border-top: 3px solid #707070;
+    /*color that will be spin*/
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px 10px;
+}
+
+
+/* Remove extra left and right margins, due to padding in columns */
+
+.row {
+    margin: 0;
+    transition: .2s;
+}
+
+
+/* .row:hover{
+    background-color: #3e474d;
+} */
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Style the counter cards */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(112, 112, 112, 0.15);
+    padding: 10px;
+    text-align: left;
+    background-color: #182835;
+    transition: transform .25s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(112, 112, 112, 0.15);
+        padding: 10px;
+        text-align: left;
+        background-color: #182835;
+    }
+    .card:hover {
+        transform: unset;
+    }
+}
+
+.none_class {
+    display: none;
+    transition: .25s;
+}
+
+:root {
+    --minWidthSnackbar: 350px;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: minWidthSnackbar;
+    /* Set a default minimum width */
+    margin-left: calc(-1 * var(--minWidthSnackbar) / 2);
+    ;
+    /* Divide value of min-width by 2 */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 51px;
+}
+
+#snackbar.showSnackbar {
+    visibility: visible;
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    /* -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s; */
+    animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 51px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 51px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 51px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 51px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+.hided {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    transition: 0.5s;
+}
+
+.overlay_content {
+    position: relative;
+    top: 40%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.overlay .closebtn_overlay {
+    position: absolute;
+    top: -11px;
+    right: 29px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+    transition: .2s;
+}
+
+.closebtn_overlay:hover {
+    opacity: .5;
 }

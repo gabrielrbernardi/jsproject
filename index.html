@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-    <html lang="en" id="main" oncontextmenu="return false;">
-    <!-- <html lang="en" id="main"> -->
+    <!-- <html lang="en" id="main" oncontextmenu="return false;"> -->
+    <html lang="en" id="main">
 
     <head>
         <meta charset="utf-8">
@@ -11,7 +11,8 @@
     </head>
 
 
-    <body class="container-fluid pl-0 pr-0" unselectable="on" onselectstart="return false;" onmousedown="return false;">
+    <!-- <body class="container-fluid pl-0 pr-0" unselectable="on" onselectstart="return false;" onmousedown="return false;" onload="getUserInfo(), getRepos()"> -->
+    <body class="container-fluid pl-0 pr-0" onload="getUserInfo(), getRepos()"></body>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">  
             <a class="navbar-brand" href="index.html">GB Site</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -27,54 +28,23 @@
                 </ul>
             </div>
         </nav>
-        <div class="row ml-1 mr-1">
-            <div class="col-sm-4">
-                <div id="accordion">
-                    <div class="card">
-                        <div class="card-header cursor-pointer" data-toggle="collapse" href="#collapse1Column1">
-                            <a class="card-link">
-                            Explicação
-                            </a>
-                        </div>
-                        <div id="collapse1Column1" class="collapse show">
-                            <div class="card-body">
-                                Este site, no momento, é utilizado para facilitar a utilização de links de diversos sites.  
-                            </div>
-                        </div>
+        <div class="row mt-1 ml-1 mr-1">
+            <div class="col-sm-3 mt-3">
+            <div class="card">
+                    <img class="card-img-top" id="profilePicture" src="https://avatars0.githubusercontent.com/u/50278200?v=4" alt="Card image">
+                    <div class="card-header">
+                        <h4 class="card-title" id="userName"></h4>
+                        <p class="card-text" id="userInfo">
                     </div>
-                    
-                    <div class="card">
-                        <div class="card-header cursor-pointer" data-toggle="collapse" href="#collapse2Column1">
-                            <a class="collapsed card-link">
-                            Desenvolvimento
-                            </a>
-                        </div>
-                        <div id="collapse2Column1" class="collapse">
-                            <div class="card-body">
-                                O site foi desenvolvido utilizando HTML, CSS, JavaScript e Bootstrap4.
-                            </div>
-                        </div>
-                    </div>
-                    
-                        <!-- <div class="card">
-                        <div class="card-header">
-                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                            Collapsible Group Item #3
-                            </a>
-                        </div>
-                        <div id="collapseThree" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                            Lorem ipsum..
-                            </div>
-                        </div> -->
                 </div>
             </div>
-            <div class="col-sm-4">
+
+            <div class="col-sm-4 mt-3">
                 <div id="accordion">
                     <div class="card">
                         <div class="card-header cursor-pointer" data-toggle="collapse" href="#collapse1Column2">
-                            <a class="card-link">
-                            Explicação
+                            <a class="collapsed card-link">
+                                Explicação
                             </a>
                         </div>
                         <div id="collapse1Column2" class="collapse show">
@@ -87,15 +57,21 @@
                     <div class="card">
                         <div class="card-header cursor-pointer" data-toggle="collapse" href="#collapse2Column2">
                             <a class="collapsed card-link">
-                            Desenvolvimento
+                                Desenvolvimento
                             </a>
                         </div>
                         <div id="collapse2Column2" class="collapse">
                             <div class="card-body">
-                                O site foi desenvolvido utilizando HTML, CSS e JavaScript
+                                O site foi desenvolvido utilizando HTML, CSS, JavaScript e Bootstrap4.
                             </div>
                         </div>
-                    </div>           
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mt-3 mb-3">
+                <div id="accordion">
+                    <div id="dynamicCards"></div>
                 </div>
             </div>
         </div>
@@ -126,69 +102,52 @@
         $(document).ready(function(){ //activate tooltip
             $('[data-toggle="tooltip"]').tooltip();
         });
+        function getRepos(){
+            $.get("https://api.github.com/users/gabrielrbernardi/repos", function(data){
+                var htmlcard = "<div class=\"card\"><div class=\"card-header cursor-pointer\" data-toggle=\"collapse\" href=\"#collapse"+i+"Column1\"><a class=\"card-link\" id=\"reposName"+i+"\"></a></a></div><div id=\"collapse"+i+"Column1\" class=\"collapse show\"><div class=\"card-body\" id=\"reposUrl"+i+"\"></div></div></div>";
+                var newcard = $(htmlcard).appendTo("#dynamicCards");
+                
+                var repName = $("<a></a>").text(data[0].name);
+                // var repUrl = $("<a></a>").text(data[0].svn_url);
+                $("#reposName"+i).append(repName);
+                // $("#reposUrl"+i).append(repUrl);
+                $("#reposUrl"+i).html(('<a class="card-link" href="'+data[0].svn_url+'" target="_blank">Acessar '+data[0].name+'</a>'))
+
+                for(var i = 1; i < data.length; i++){
+                    var htmlcard = "<div class=\"card\"><div class=\"card-header cursor-pointer\" data-toggle=\"collapse\" href=\"#collapse"+i+"Column1\"><a class=\"collapsed card-link\" id=\"reposName"+i+"\"></a></a></div><div id=\"collapse"+i+"Column1\" class=\"collapse\"><div class=\"card-body\" id=\"reposUrl"+i+"\"></div></div></div>";
+                    var newcard = $(htmlcard).appendTo("#dynamicCards");
+                }
+                getRepos1();
+            });
+        }
+        function getRepos1(){
+            $.get("https://api.github.com/users/gabrielrbernardi/repos", function(data){
+                for(var i = 1; i < data.length; i++){
+                    var repName = $("<a></a>").text(data[i].name);
+                    var repUrl = $("<a></a>").text(data[i].svn_url);
+                    $("#reposName"+i).append(repName);
+                    $("#reposUrl"+i).append(repUrl);
+                    $("#reposUrl"+i).html(('<a class="card-link" href="'+data[i].svn_url+'" target="_blank">Acessar '+data[i].name+'</a>'))
+                }
+            });
+        }
+        function getUserInfo(){
+            var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; //Get width of the screen
+            if(w<576){
+                document.getElementById("profilePicture").style.display = "none";
+            }else{
+                document.getElementById("profilePicture").style.display = "block";
+            }
+
+            $.get("https://api.github.com/users/gabrielrbernardi", function(response){
+                $("#userName").append(response.name)
+                $("#userInfo").html(('<a class="card-text">'+response.bio+'<br><br>'+response.public_repos+' public repositories.</a><br><br>'+
+                '<a class="btn btn-info" role="button" href='+response.html_url+'>View full profile</a>'))
+                // console.log(response)
+            })
+        }
     </script>
 
     <!-- <script src="script.js"></script> -->
 
 </html>
-    <!-- <nav class="nav_global">
-        <nav class="nav_body">
-            <h2 class="title_2">
-                <a class="color_link" onclick="sideNav()">Para abrir o menu de navegação, CLIQUE AQUI</a><br>
-            </h2>
-            <br>
-            <h2 class="title_2">
-                <a class="color_link" onclick="redirect1()">Links Úteis</a><br>
-            </h2>
-            <br>
-            <h2 class="title_2">
-                <a class="color_link4">Este site, no momento, é utilizado para facilitar a utilização de links de diversos sites.</a>
-            </h2><br>
-            <h2 class="title_2">
-                <a class="color_link4">O site foi desenvolvido utilizando HTML, CSS e JavaScript</a>
-            </h2><br>
-
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="links.html">Links Úteis</a></li>
-                <li><a href="dontpad.html">Dontpad</a></li>
-            </div>
-        </nav>
-    </nav>
-
-    <footer class="footer_page">
-        <ul class="footer_ul">
-            <li><a class="footer_text" href="https://github.com/gabrielrbernardi" target="_blank">GitHub</a></li>
-            <li><a class="footer_text" href="https://github.com/gabrielrbernardi/jsproject" target="_blank">JS Project</a></li>
-            <li><a class="footer_text" href="https://photos.app.goo.gl/V9tYsDakvfccsV479">Help</a></li>
-            <li>
-                <p>&copy; 2019, Gabriel Bernardi</p>
-            </li>
-        </ul>
-    </footer>
-
-    <script>
-        function redirect() {
-            location.href = "login.html";
-        }
-
-        function redirect1() {
-            location.href = "links.html";
-        }
-
-        function sideNav() {
-            if (sideNavState == 0) {
-                sideNavState = 1;
-                openNav();
-            } else {
-                sideNavState = 0;
-                closeNav();
-            }
-        }
-        var sideNavState = 0;
-    </script>
-    <script src="script.js">
-    </script>
-
-</body> -->

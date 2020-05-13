@@ -34,6 +34,10 @@
                     <img class="card-img-top" id="profilePicture" src="https://avatars0.githubusercontent.com/u/50278200?v=4" alt="Card image">
                     <div class="card-header">
                         <h4 class="card-title" id="userName"></h4>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary disabled">@</button>
+                            <button type="button" class="btn btn-primary"><a class="card-link text-light" id="userLogin" target="_blank" href="https://github.com/gabrielrbernardi"></a></button>
+                        </div>
                         <p class="card-text" id="userInfo">
                     </div>
                 </div>
@@ -70,11 +74,22 @@
             </div>
 
             <div class="col-sm-4 mt-3 mb-3">
+                <!-- <a class="card-link">Type here to search on repositories</a> -->
+                <div class="input-group mb-3">
+                    <input class="form-control" id="searchInput" type="text" placeholder="Search..">
+                    <!-- <input class="form-control" id="searchInput" type="text" placeholder="Search.."> -->
+                    <div class="input-group-append">
+                        <button class="btn btn-danger" onclick="document.getElementById('searchInput').value = ''" type="button">X</button>
+                    </div>
+                </div>
                 <div id="accordion">
-                    <div id="dynamicCards"></div>
+                    <ul class="list-group" id="cardList">
+                        <div id="dynamicCards"></div>
+                    </ul>
                 </div>
             </div>
         </div>
+
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
             <ul class="navbar-nav">
                 <li class="navbar-item"><a class="nav-link text-info" href="https://github.com/gabrielrbernardi " target="_blank ">GitHub</a></li>
@@ -141,11 +156,21 @@
 
             $.get("https://api.github.com/users/gabrielrbernardi", function(response){
                 $("#userName").append(response.name)
+                $("#userLogin").append(response.login)
                 $("#userInfo").html(('<a class="card-text">'+response.bio+'<br><br>'+response.public_repos+' public repositories.</a><br><br>'+
                 '<a class="btn btn-info" role="button" href='+response.html_url+'>View full profile</a>'))
-                // console.log(response)
+                console.log(response)
             })
         }
+        $(document).ready(function(){
+            $("#searchInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                console.log(value)
+                $("#cardList a").filter(function() {
+                    $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
     </script>
 
     <!-- <script src="script.js"></script> -->

@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" name="viewport" />
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>GB Site</title>
         <link rel="shortcut icon" href="assets/prime_icon.ico" />
     </head>
@@ -74,12 +75,10 @@
             </div>
 
             <div class="col-sm-4 mt-3 mb-3">
-                <!-- <a class="card-link">Type here to search on repositories</a> -->
                 <div class="input-group mb-3">
                     <input class="form-control" id="searchInput" type="text" placeholder="Search..">
-                    <!-- <input class="form-control" id="searchInput" type="text" placeholder="Search.."> -->
                     <div class="input-group-append">
-                        <button class="btn btn-danger" onclick="document.getElementById('searchInput').value = ''" type="button">X</button>
+                        <button class="btn btn-danger" id="clearButtonSearch" onclick="clearInput()" type="button">X</button>
                     </div>
                 </div>
                 <div id="accordion">
@@ -123,9 +122,7 @@
                 var newcard = $(htmlcard).appendTo("#dynamicCards");
                 
                 var repName = $("<a></a>").text(data[0].name);
-                // var repUrl = $("<a></a>").text(data[0].svn_url);
                 $("#reposName"+i).append(repName);
-                // $("#reposUrl"+i).append(repUrl);
                 $("#reposUrl"+i).html(('<a class="card-link" href="'+data[0].svn_url+'" target="_blank">Acessar '+data[0].name+'</a>'))
 
                 for(var i = 1; i < data.length; i++){
@@ -165,14 +162,19 @@
         $(document).ready(function(){
             $("#searchInput").on("keyup", function() {
                 var value = $(this).val().toLowerCase();
-                console.log(value)
                 $("#cardList a").filter(function() {
-                    $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1);
                 });
             });
         });
+        $("#searchInput").ready(function(){
+            $("#searchInput").val("");
+        });
+        function clearInput(){
+            document.getElementById('searchInput').value = ''
+            $("#cardList a").filter(function() {
+                $(this).parent().toggle($(this).text().toLowerCase().indexOf("") > -1)
+            });
+        }
     </script>
-
-    <!-- <script src="script.js"></script> -->
-
 </html>
